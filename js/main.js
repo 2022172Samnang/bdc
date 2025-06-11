@@ -87,7 +87,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Header scroll effect
-    const header = document.querySelector('.header');
     let lastScrollTop = 0;
     
     window.addEventListener('scroll', function() {
@@ -126,50 +125,100 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Counter animation for hero stats
     const statNumbers = document.querySelectorAll('.stat-number');
-    const animateCounter = (element, target) => {
+
+    const animateCounter = (element, target, originalText) => {
         let current = 0;
         const increment = target / 100;
+        const hasPercent = originalText.includes('%');
+        const hasPlus = originalText.includes('+');
+        const hasDecimal = originalText.includes('.');
+
         const timer = setInterval(() => {
             current += increment;
             if (current >= target) {
                 current = target;
                 clearInterval(timer);
             }
-            
-            if (target.toString().includes('.')) {
-                element.textContent = current.toFixed(1) + (target.toString().includes('%') ? '%' : '');
+
+            let displayValue;
+            if (hasDecimal) {
+                displayValue = current.toFixed(1);
             } else {
-                element.textContent = Math.floor(current) + (target.toString().includes('+') ? '+' : '');
+                displayValue = Math.floor(current).toString();
             }
+
+            if (hasPercent) {
+                displayValue += '%';
+            } else if (hasPlus) {
+                displayValue += '+';
+            }
+
+            element.textContent = displayValue;
         }, 20);
     };
+
+    // Store original values before any modifications
+    const originalValues = [];
+    statNumbers.forEach(stat => {
+        originalValues.push(stat.textContent);
+    });
 
     // Trigger counter animation when hero is visible
     const heroObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                statNumbers.forEach(stat => {
-                    const text = stat.textContent;
+                statNumbers.forEach((stat, index) => {
+                    const originalText = originalValues[index]; // Use stored original value
                     let target;
-                    
-                    if (text.includes('%')) {
-                        target = parseFloat(text.replace('%', ''));
-                    } else if (text.includes('+')) {
-                        target = parseInt(text.replace('+', ''));
+
+                    if (originalText.includes('%')) {
+                        target = parseFloat(originalText.replace('%', ''));
+                    } else if (originalText.includes('+')) {
+                        target = parseInt(originalText.replace('+', ''));
                     } else {
-                        target = parseInt(text);
+                        target = parseInt(originalText);
                     }
-                    
-                    animateCounter(stat, target);
+
+                    // Reset the stat to 0 before animating
+                    stat.textContent = '0';
+                    animateCounter(stat, target, originalText);
                 });
                 heroObserver.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.5 });
+    }, {
+        threshold: 0.1, // Lower threshold to trigger earlier
+        rootMargin: '0px 0px -100px 0px' // Trigger when element is 100px from bottom of viewport
+    });
 
     const heroStats = document.querySelector('.hero-stats');
     if (heroStats) {
         heroObserver.observe(heroStats);
+
+        // Fallback: trigger animation after 2 seconds if intersection observer doesn't work
+        setTimeout(() => {
+            if (heroStats && statNumbers.length > 0) {
+                const firstStatText = statNumbers[0].textContent;
+                // Check if animation hasn't started yet (still shows original value)
+                if (originalValues.includes(firstStatText)) {
+                    statNumbers.forEach((stat, index) => {
+                        const originalText = originalValues[index];
+                        let target;
+
+                        if (originalText.includes('%')) {
+                            target = parseFloat(originalText.replace('%', ''));
+                        } else if (originalText.includes('+')) {
+                            target = parseInt(originalText.replace('+', ''));
+                        } else {
+                            target = parseInt(originalText);
+                        }
+
+                        stat.textContent = '0';
+                        animateCounter(stat, target, originalText);
+                    });
+                }
+            }
+        }, 2000);
     }
 
     // Form handling
