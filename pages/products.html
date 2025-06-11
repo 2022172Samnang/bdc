@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - BDC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/dark-mode.css">
+    <link rel="stylesheet" href="../css/navbar-fix.css">
+    <link rel="stylesheet" href="../css/products-layout-fix.css">
+    <script src="../js/translations.js"></script>
+
+
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" class="logo">
+                    <img src="../images/bdc_logo.png" alt="BDC Logo" style="height: 40px;">
+                </a>
+                
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="../index.html" data-translate="nav.home">Home</a></li>
+                        <li><a href="products.html" class="active" data-translate="nav.products">Products</a></li>
+                        <li><a href="about.html" data-translate="nav.about">About Us</a></li>
+                        <li><a href="contact.html" data-translate="nav.contact">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-controls">
+                    <!-- Language Switcher -->
+                    <div class="language-switcher">
+                        <button class="lang-btn" onclick="toggleLanguage()">
+                            <i class="fas fa-globe"></i>
+                            <span id="current-lang">EN</span>
+                        </button>
+                    </div>
+
+                    <!-- Dark Mode Toggle -->
+                    <div class="theme-toggle">
+                        <button class="theme-btn" onclick="toggleTheme()">
+                            <i class="fas fa-moon" id="theme-icon"></i>
+                        </button>
+                    </div>
+
+                    <!-- Mobile Menu Toggle -->
+                    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Products Hero -->
+    <section class="products-hero">
+        <div class="container">
+            <h1 data-translate="products.hero.title">Our Premium Products</h1>
+            <p data-translate="products.hero.subtitle">Discover our complete range of professional cleaning solutions</p>
+        </div>
+    </section>
+
+    <!-- Products Container -->
+    <div class="container">
+        <div class="products-container">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <h3 data-translate="products.categories.title">Categories</h3>
+                <ul class="sidebar-categories">
+                    <li>
+                        <a href="#" class="category-item active" data-category="all-products">
+                            <i class="fas fa-th-large"></i>All Products
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="category-item" data-category="detergent-powder">
+                            <i class="fas fa-box"></i>Detergent Powder
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="category-item" data-category="dishwashing">
+                            <i class="fas fa-utensils"></i>Dishwashing Liquid
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="category-item" data-category="floor-cleaner">
+                            <i class="fas fa-home"></i>Floor Cleaner
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="category-item" data-category="detergent-liquid">
+                            <i class="fas fa-tint"></i>Detergent Liquid
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="category-item" data-category="glass-cleaner">
+                            <i class="fas fa-window-maximize"></i>Glass Cleaner
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="category-item" data-category="hand-washing">
+                            <i class="fas fa-hands-wash"></i>Hand Washing
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="category-item" data-category="bleach">
+                            <i class="fas fa-flask"></i>Bleach
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="category-item" data-category="toilet-cleaner">
+                            <i class="fas fa-toilet"></i>Toilet Cleaner
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+
+            <!-- Main Products Area -->
+            <main class="products-main">
+                <div class="products-header">
+                    <div class="products-count">
+                        <span id="product-count">14</span> <span>products found</span>
+                    </div>
+                    <div class="view-info">
+                        <i class="fas fa-list"></i> List View
+                    </div>
+                </div>
+
+                <!-- Dynamic Product Display -->
+                <div id="products-display">
+                    <!-- All Products Section -->
+                    <section id="all-products" class="product-section active">
+                        <h2 class="section-title" id="current-category-title">All Products</h2>
+                        <div class="products-grid" id="all-products-grid">
+                            <!-- Products will be loaded dynamically -->
+                        </div>
+                    </section>
+
+                    <!-- Category Sections -->
+                    <section id="detergent-powder" class="product-section">
+                        <h2 class="section-title">Detergent Powder</h2>
+                        <div class="products-grid" id="detergent-powder-grid"></div>
+                    </section>
+
+                    <section id="dishwashing" class="product-section">
+                        <h2 class="section-title">Dishwashing Liquid</h2>
+                        <div class="products-grid" id="dishwashing-grid"></div>
+                    </section>
+
+                    <section id="floor-cleaner" class="product-section">
+                        <h2 class="section-title">Floor Cleaner</h2>
+                        <div class="products-grid" id="floor-cleaner-grid"></div>
+                    </section>
+
+                    <section id="detergent-liquid" class="product-section">
+                        <h2 class="section-title">Detergent Liquid</h2>
+                        <div class="products-grid" id="detergent-liquid-grid"></div>
+                    </section>
+
+                    <section id="glass-cleaner" class="product-section">
+                        <h2 class="section-title">Glass Cleaner</h2>
+                        <div class="products-grid" id="glass-cleaner-grid"></div>
+                    </section>
+
+                    <section id="hand-washing" class="product-section">
+                        <h2 class="section-title">Hand Washing</h2>
+                        <div class="products-grid" id="hand-washing-grid"></div>
+                    </section>
+
+                    <section id="bleach" class="product-section">
+                        <h2 class="section-title">Bleach</h2>
+                        <div class="products-grid" id="bleach-grid"></div>
+                    </section>
+
+                    <section id="toilet-cleaner" class="product-section">
+                        <h2 class="section-title">Toilet Cleaner</h2>
+                        <div class="products-grid" id="toilet-cleaner-grid"></div>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About BDC</h3>
+                    <p>Leading provider of premium cleaning solutions for homes and businesses worldwide. Trusted by millions for over 20 years.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Product Categories</h3>
+                    <ul>
+                        <li><a href="#detergent-powder">Detergent Powder</a></li>
+                        <li><a href="#dishwashing">Dishwashing Liquid</a></li>
+                        <li><a href="#floor-cleaner">Floor Cleaner</a></li>
+                        <li><a href="#glass-cleaner">Glass Cleaner</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> (855) 89 982 999</p>
+                        <p><i class="fas fa-envelope"></i> info@bdc.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> S.I Building, #93, Preah Sihanouk Blvd, Phnom Penh</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 BDC. All rights reserved. Professional cleaning solutions for every need.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/translations.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/products.js"></script>
+
+
+
+
+
+</body>
+</html>

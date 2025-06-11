@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BDC best quality in cambodia - Premium Cleaning Products</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+    <link rel="stylesheet" href="css/navbar-fix.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img src="images/bdc_logo.png" alt="BDC Logo" style="height: 40px;">
+                </a>
+                
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="index.html" data-translate="nav.home">Home</a></li>
+                        <li><a href="pages/products.html" data-translate="nav.products">Products</a></li>
+                        <li><a href="pages/about.html" data-translate="nav.about">About Us</a></li>
+                        <li><a href="pages/contact.html" data-translate="nav.contact">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-controls">
+                    <!-- Language Switcher -->
+                    <div class="language-switcher">
+                        <button class="lang-btn" onclick="toggleLanguage()">
+                            <i class="fas fa-globe"></i>
+                            <span id="current-lang">EN</span>
+                        </button>
+                    </div>
+
+                    <!-- Dark Mode Toggle -->
+                    <div class="theme-toggle">
+                        <button class="theme-btn" onclick="toggleTheme()">
+                            <i class="fas fa-moon" id="theme-icon"></i>
+                        </button>
+                    </div>
+
+                    <!-- Mobile Menu Toggle -->
+                    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 data-translate="hero.title">Premium Cleaning Solutions for Every Need</h1>
+                <p data-translate="hero.subtitle">Discover our complete range of professional-grade cleaning products designed to keep your home and business spotless</p>
+                <div class="hero-buttons">
+                    <a href="pages/products.html" class="btn btn-primary" data-translate="hero.shop_now">Shop Now</a>
+                    <a href="pages/about.html" class="btn btn-secondary" data-translate="hero.learn_more">Learn More</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">14+</span>
+                        <span class="stat-label" data-translate="hero.products">Products</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">8</span>
+                        <span class="stat-label" data-translate="hero.categories">Categories</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">99.9%</span>
+                        <span class="stat-label" data-translate="hero.effective">Effective</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">20+</span>
+                        <span class="stat-label" data-translate="hero.years">Years</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="featured-categories">
+        <div class="container">
+            <h2 class="section-title" data-translate="categories.title">Product Categories</h2>
+            <p class="section-subtitle" data-translate="categories.subtitle">Choose from our wide range of cleaning solutions</p>
+            
+            <div class="categories-grid">
+                <div class="category-card" onclick="window.location.href='pages/products.html#detergent-powder'">
+                    <div class="category-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <h3 data-translate="categories.detergent_powder">Detergent Powder</h3>
+                    <p data-translate="categories.detergent_powder_desc">Powerful cleaning for all fabrics</p>
+                    <span class="product-count">5 Products</span>
+                </div>
+
+                <div class="category-card" onclick="window.location.href='pages/products.html#dishwashing'">
+                    <div class="category-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3 data-translate="categories.dishwashing">Dishwashing Liquid</h3>
+                    <p data-translate="categories.dishwashing_desc">Gentle yet effective dish cleaning</p>
+                    <span class="product-count">1 Product</span>
+                </div>
+
+                <div class="category-card" onclick="window.location.href='pages/products.html#floor-cleaner'">
+                    <div class="category-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 data-translate="categories.floor_cleaner">Floor Cleaner</h3>
+                    <p data-translate="categories.floor_cleaner_desc">Antibacterial floor cleaning solutions</p>
+                    <span class="product-count">2 Products</span>
+                </div>
+
+                <div class="category-card" onclick="window.location.href='pages/products.html#detergent-liquid'">
+                    <div class="category-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3 data-translate="categories.detergent_liquid">Detergent Liquid</h3>
+                    <p data-translate="categories.detergent_liquid_desc">Premium liquid detergents</p>
+                    <span class="product-count">2 Products</span>
+                </div>
+
+                <div class="category-card" onclick="window.location.href='pages/products.html#glass-cleaner'">
+                    <div class="category-icon">
+                        <i class="fas fa-window-maximize"></i>
+                    </div>
+                    <h3 data-translate="categories.glass_cleaner">Glass Cleaner</h3>
+                    <p data-translate="categories.glass_cleaner_desc">Crystal clear glass cleaning</p>
+                    <span class="product-count">1 Product</span>
+                </div>
+
+                <div class="category-card" onclick="window.location.href='pages/products.html#hand-washing'">
+                    <div class="category-icon">
+                        <i class="fas fa-hands-wash"></i>
+                    </div>
+                    <h3 data-translate="categories.hand_washing">Hand Washing</h3>
+                    <p data-translate="categories.hand_washing_desc">Gentle hand care products</p>
+                    <span class="product-count">1 Product</span>
+                </div>
+
+                <div class="category-card" onclick="window.location.href='pages/products.html#bleach'">
+                    <div class="category-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3 data-translate="categories.bleach">Bleach</h3>
+                    <p data-translate="categories.bleach_desc">Powerful stain removal</p>
+                    <span class="product-count">1 Product</span>
+                </div>
+
+                <div class="category-card" onclick="window.location.href='pages/products.html#toilet-cleaner'">
+                    <div class="category-icon">
+                        <i class="fas fa-toilet"></i>
+                    </div>
+                    <h3 data-translate="categories.toilet_cleaner">Toilet Cleaner</h3>
+                    <p data-translate="categories.toilet_cleaner_desc">Complete bathroom cleaning</p>
+                    <span class="product-count">1 Product</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title" data-translate="features.title">Why Choose BDC?</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 data-translate="features.quality.title">Premium Quality</h3>
+                    <p data-translate="features.quality.desc">All our products are made with the highest quality ingredients and undergo rigorous testing.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 data-translate="features.eco.title">Eco-Friendly</h3>
+                    <p data-translate="features.eco.desc">Environmentally conscious formulations that are safe for your family and the planet.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 data-translate="features.trusted.title">Trusted Brand</h3>
+                    <p data-translate="features.trusted.desc">Over 20 years of experience serving millions of satisfied customers worldwide.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3 data-translate="features.delivery.title">Fast Delivery</h3>
+                    <p data-translate="features.delivery.desc">Quick and reliable delivery service to get your products when you need them.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 data-translate="cta.title">Ready to Experience Premium Cleaning?</h2>
+                <p data-translate="cta.subtitle">Browse our complete product range and find the perfect cleaning solution for your needs.</p>
+                <a href="pages/products.html" class="btn btn-primary" data-translate="cta.button">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-translate="footer.about.title">About CleanPro</h3>
+                    <p data-translate="footer.about.desc">Leading provider of premium cleaning solutions for homes and businesses worldwide. Trusted by millions for over 20 years.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3 data-translate="footer.quick_links.title">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html" data-translate="nav.home">Home</a></li>
+                        <li><a href="pages/products.html" data-translate="nav.products">Products</a></li>
+                        <li><a href="pages/about.html" data-translate="nav.about">About Us</a></li>
+                        <li><a href="pages/contact.html" data-translate="nav.contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 data-translate="footer.categories.title">Product Categories</h3>
+                    <ul>
+                        <li><a href="pages/products.html#detergent-powder" data-translate="categories.detergent_powder">Detergent Powder</a></li>
+                        <li><a href="pages/products.html#dishwashing" data-translate="categories.dishwashing">Dishwashing Liquid</a></li>
+                        <li><a href="pages/products.html#floor-cleaner" data-translate="categories.floor_cleaner">Floor Cleaner</a></li>
+                        <li><a href="pages/products.html#glass-cleaner" data-translate="categories.glass_cleaner">Glass Cleaner</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 data-translate="footer.contact.title">Contact Info</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> <span data-translate="footer.contact.phone">(855) 89 982 999</span></p>
+                        <p><i class="fas fa-envelope"></i> <span data-translate="footer.contact.email">info@cleanpro.com</span></p>
+                        <p><i class="fas fa-map-marker-alt"></i> <span data-translate="footer.contact.address">S.I Building, #93, Preah Sihanouk Blvd, Phnom Penh</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p data-translate="footer.copyright">&copy; 2024 CleanPro. All rights reserved. Professional cleaning solutions for every need.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/translations.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

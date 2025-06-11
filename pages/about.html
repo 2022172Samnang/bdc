@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - BDC best quality in cambodia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/dark-mode.css">
+    <link rel="stylesheet" href="../css/navbar-fix.css">
+    <style>
+        /* About Page Specific Styles */
+        .about-hero {
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-red) 100%);
+            padding: 6rem 0;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-hero p {
+            color: white;
+            opacity: 0.95;
+            font-size: 1.25rem;
+            margin-bottom: 0;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .about-content {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .about-section {
+            margin-bottom: 5rem;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .about-card {
+            background: linear-gradient(135deg, var(--white) 0%, var(--gray-50) 100%);
+            padding: 3rem;
+            border-radius: var(--border-radius-xl);
+            border: 1px solid var(--gray-200);
+            transition: all var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, var(--primary-red), var(--secondary-red));
+            transform: scaleX(0);
+            transition: transform var(--transition-normal);
+        }
+
+        .about-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .about-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--accent-red);
+        }
+
+        .about-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-red), var(--secondary-red));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            transition: all var(--transition-normal);
+        }
+
+        .about-card:hover .about-icon {
+            transform: scale(1.1);
+        }
+
+        .about-icon i {
+            font-size: 2rem;
+            color: white;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(135deg, var(--primary-red), var(--secondary-red));
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius-xl);
+            border: 1px solid var(--gray-200);
+            width: 45%;
+            position: relative;
+            transition: all var(--transition-normal);
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .timeline-year {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(135deg, var(--primary-red), var(--secondary-red));
+            color: white;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.2rem;
+            z-index: 2;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .team-member {
+            background: white;
+            border-radius: var(--border-radius-xl);
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid var(--gray-200);
+            transition: all var(--transition-normal);
+        }
+
+        .team-member:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .team-photo {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, var(--light-red), var(--gray-100));
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--primary-red);
+        }
+
+        .stats-section {
+            background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: var(--border-radius-xl);
+            border: 1px solid var(--gray-200);
+            transition: all var(--transition-normal);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary-red), var(--secondary-red));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+                padding-left: 60px;
+            }
+
+            .timeline-item:nth-child(even) {
+                flex-direction: column;
+            }
+
+            .timeline-content {
+                width: 100%;
+            }
+
+            .timeline-year {
+                left: 20px;
+                transform: translateY(-50%);
+                width: 60px;
+                height: 60px;
+                font-size: 1rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" class="logo">
+                    <img src="../images/bdc_logo.png" alt="BDC Logo" style="height: 40px;">
+                </a>
+                
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="../index.html" data-translate="nav.home">Home</a></li>
+                        <li><a href="products.html" data-translate="nav.products">Products</a></li>
+                        <li><a href="about.html" class="active" data-translate="nav.about">About Us</a></li>
+                        <li><a href="contact.html" data-translate="nav.contact">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-controls">
+                    <!-- Language Switcher -->
+                    <div class="language-switcher">
+                        <button class="lang-btn" onclick="toggleLanguage()">
+                            <i class="fas fa-globe"></i>
+                            <span id="current-lang">EN</span>
+                        </button>
+                    </div>
+
+                    <!-- Dark Mode Toggle -->
+                    <div class="theme-toggle">
+                        <button class="theme-btn" onclick="toggleTheme()">
+                            <i class="fas fa-moon" id="theme-icon"></i>
+                        </button>
+                    </div>
+
+                    <!-- Mobile Menu Toggle -->
+                    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Hero -->
+    <section class="about-hero">
+        <div class="container">
+            <h1 data-translate="about.hero.title">About CleanPro</h1>
+            <p data-translate="about.hero.subtitle">Leading the way in premium cleaning solutions for over 20 years</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-content">
+        <div class="container">
+            <!-- Mission & Vision -->
+            <div class="about-section">
+                <div class="about-grid">
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3 data-translate="about.mission.title">Our Mission</h3>
+                        <p data-translate="about.mission.content">To provide the highest quality cleaning products that make life easier while protecting the environment and ensuring the safety of families worldwide. We believe that effective cleaning should never come at the cost of health or environmental sustainability.</p>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3 data-translate="about.vision.title">Our Vision</h3>
+                        <p data-translate="about.vision.content">To be the global leader in sustainable cleaning solutions, setting the standard for quality, innovation, and environmental responsibility. We envision a world where every home and business can achieve perfect cleanliness without compromising on safety or sustainability.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Company Story -->
+            <div class="about-section">
+                <h2 class="section-title">Our Story</h2>
+                <p class="section-subtitle">From humble beginnings to global leadership</p>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h4>The Beginning</h4>
+                            <p>BDC was founded with a simple mission: to create cleaning products that are both effective and safe for families. Starting in a small laboratory, our founders were determined to revolutionize the cleaning industry with innovative formulations.</p>
+                        </div>
+                        <div class="timeline-year">2004</div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h4>First Major Breakthrough</h4>
+                            <p>We developed our signature eco-friendly formula that delivers professional-grade cleaning power while being gentle on the environment. This breakthrough established BDC as a pioneer in sustainable cleaning solutions.</p>
+                        </div>
+                        <div class="timeline-year">2008</div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h4>International Expansion</h4>
+                            <p>BDC expanded beyond domestic markets, bringing our premium cleaning solutions to families and businesses across multiple countries. Our commitment to quality and safety earned trust worldwide.</p>
+                        </div>
+                        <div class="timeline-year">2012</div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h4>Innovation Leadership</h4>
+                            <p>We launched our advanced product line featuring cutting-edge formulations that set new industry standards. Our research and development team continued to push the boundaries of what's possible in cleaning technology.</p>
+                        </div>
+                        <div class="timeline-year">2018</div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h4>Sustainability Commitment</h4>
+                            <p>BDC made a comprehensive commitment to environmental sustainability, implementing carbon-neutral manufacturing processes and introducing fully biodegradable packaging across our entire product range.</p>
+                        </div>
+                        <div class="timeline-year">2022</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Values -->
+            <div class="about-section">
+                <h2 class="section-title" data-translate="about.values.title">Our Values</h2>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h4 data-translate="about.values.quality">Quality Excellence</h4>
+                        <p data-translate="about.values.quality_desc">We never compromise on the quality of our products or services. Every formula is rigorously tested to ensure it meets our exacting standards for effectiveness, safety, and environmental responsibility.</p>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h4 data-translate="about.values.innovation">Innovation</h4>
+                        <p data-translate="about.values.innovation_desc">Continuously developing new and better cleaning solutions through cutting-edge research and development. We invest heavily in technology and scientific advancement to stay ahead of industry trends.</p>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h4 data-translate="about.values.sustainability">Sustainability</h4>
+                        <p data-translate="about.values.sustainability_desc">Committed to protecting our planet for future generations through eco-friendly formulations, sustainable packaging, and carbon-neutral manufacturing processes that minimize environmental impact.</p>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4 data-translate="about.values.trust">Trust</h4>
+                        <p data-translate="about.values.trust_desc">Building lasting relationships through reliability and transparency. We believe in honest communication, ethical business practices, and delivering on our promises to customers and partners.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team -->
+            <div class="about-section">
+                <h2 class="section-title">Our Leadership Team</h2>
+                <p class="section-subtitle">Meet the experts behind BDC's success</p>
+                
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="team-photo">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h4>Sarah Johnson</h4>
+                        <p class="team-role">Chief Executive Officer</p>
+                        <p>With over 15 years of experience in the cleaning industry, Sarah leads BDC's strategic vision and global expansion initiatives. Her commitment to sustainability has shaped the company's environmental policies.</p>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="team-photo">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h4>Dr. Michael Chen</h4>
+                        <p class="team-role">Chief Technology Officer</p>
+                        <p>A renowned chemist with a PhD in Environmental Science, Dr. Chen oversees product development and ensures all formulations meet the highest standards for effectiveness and environmental safety.</p>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="team-photo">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h4>Emily Rodriguez</h4>
+                        <p class="team-role">Chief Marketing Officer</p>
+                        <p>Emily brings creative vision and market expertise to BDC's brand strategy. Her innovative campaigns have helped establish BDC as a trusted household name worldwide.</p>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="team-photo">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h4>David Thompson</h4>
+                        <p class="team-role">Chief Operations Officer</p>
+                        <p>David ensures efficient manufacturing and distribution processes while maintaining quality standards. His operational excellence has enabled BDC's rapid global expansion.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics -->
+    <section class="stats-section">
+        <div class="container">
+            <h2 class="section-title">BDC by the Numbers</h2>
+            <p class="section-subtitle">Our achievements and impact worldwide</p>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">20+</span>
+                    <span class="stat-label">Years of Excellence</span>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Countries Served</span>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-number">10M+</span>
+                    <span class="stat-label">Satisfied Customers</span>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-number">25+</span>
+                    <span class="stat-label">Premium Products</span>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-number">99.9%</span>
+                    <span class="stat-label">Effectiveness Rate</span>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Eco-Friendly</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-translate="footer.about.title">About CleanPro</h3>
+                    <p data-translate="footer.about.desc">Leading provider of premium cleaning solutions for homes and businesses worldwide. Trusted by millions for over 20 years.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3 data-translate="footer.quick_links.title">Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html" data-translate="nav.home">Home</a></li>
+                        <li><a href="products.html" data-translate="nav.products">Products</a></li>
+                        <li><a href="about.html" data-translate="nav.about">About Us</a></li>
+                        <li><a href="contact.html" data-translate="nav.contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 data-translate="footer.categories.title">Product Categories</h3>
+                    <ul>
+                        <li><a href="products.html#detergent-powder" data-translate="categories.detergent_powder">Detergent Powder</a></li>
+                        <li><a href="products.html#dishwashing" data-translate="categories.dishwashing">Dishwashing Liquid</a></li>
+                        <li><a href="products.html#floor-cleaner" data-translate="categories.floor_cleaner">Floor Cleaner</a></li>
+                        <li><a href="products.html#glass-cleaner" data-translate="categories.glass_cleaner">Glass Cleaner</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 data-translate="footer.contact.title">Contact Info</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> <span data-translate="footer.contact.phone">(855) 89 982 999</span></p>
+                        <p><i class="fas fa-envelope"></i> <span data-translate="footer.contact.email">info@cleanpro.com</span></p>
+                        <p><i class="fas fa-map-marker-alt"></i> <span data-translate="footer.contact.address">S.I Building, #93, Preah Sihanouk Blvd, Phnom Penh</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p data-translate="footer.copyright">&copy; 2024 CleanPro. All rights reserved. Professional cleaning solutions for every need.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/translations.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - BDC best quality in cambodia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/dark-mode.css">
+    <link rel="stylesheet" href="../css/navbar-fix.css">
+    <style>
+        /* Contact Page Specific Styles */
+        .contact-hero {
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-red) 100%);
+            padding: 6rem 0;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-hero p {
+            color: white;
+            opacity: 0.95;
+            font-size: 1.25rem;
+            margin-bottom: 0;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .contact-content {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .contact-form {
+            background: linear-gradient(135deg, var(--white) 0%, var(--gray-50) 100%);
+            padding: 3rem;
+            border-radius: var(--border-radius-xl);
+            border: 1px solid var(--gray-200);
+            box-shadow: var(--shadow-lg);
+            height: fit-content;
+        }
+
+        .contact-form h3 {
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            font-size: 1.75rem;
+        }
+
+        .contact-form p {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border: 2px solid var(--gray-300);
+            border-radius: var(--border-radius-md);
+            font-size: 1rem;
+            transition: all var(--transition-normal);
+            background: white;
+            color: var(--text-dark);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-red);
+            box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1.25rem 2rem;
+            background: linear-gradient(135deg, var(--primary-red), var(--secondary-red));
+            color: white;
+            border: none;
+            border-radius: var(--border-radius-md);
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .submit-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--dark-red), var(--primary-red));
+            transition: left var(--transition-normal);
+            z-index: -1;
+        }
+
+        .submit-btn:hover::before {
+            left: 0;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-red);
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-info-card {
+            background: linear-gradient(135deg, var(--white) 0%, var(--gray-50) 100%);
+            padding: 2.5rem;
+            border-radius: var(--border-radius-xl);
+            border: 1px solid var(--gray-200);
+            transition: all var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-info-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, var(--primary-red), var(--secondary-red));
+            transform: scaleX(0);
+            transition: transform var(--transition-normal);
+        }
+
+        .contact-info-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .contact-info-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-red), var(--secondary-red));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            transition: all var(--transition-normal);
+        }
+
+        .contact-info-card:hover .contact-icon {
+            transform: scale(1.1);
+        }
+
+        .contact-icon i {
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .contact-info-card h4 {
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .contact-info-card p {
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info-card a {
+            color: var(--primary-red);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color var(--transition-normal);
+        }
+
+        .contact-info-card a:hover {
+            color: var(--dark-red);
+        }
+
+        .map-section {
+            margin-top: 5rem;
+            text-align: center;
+        }
+
+        .map-container {
+            background: var(--gray-100);
+            border-radius: var(--border-radius-xl);
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2rem;
+            border: 1px solid var(--gray-200);
+        }
+
+        .map-placeholder {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+        }
+
+
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .contact-form,
+            .contact-info-card {
+                padding: 2rem;
+            }
+
+            .map-container {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-form,
+            .contact-info-card {
+                padding: 1.5rem;
+            }
+
+            .form-group input,
+            .form-group textarea,
+            .form-group select {
+                padding: 0.875rem 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" class="logo">
+                    <img src="../images/bdc_logo.png" alt="BDC Logo" style="height: 40px;">
+                </a>
+                
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="../index.html" data-translate="nav.home">Home</a></li>
+                        <li><a href="products.html" data-translate="nav.products">Products</a></li>
+                        <li><a href="about.html" data-translate="nav.about">About Us</a></li>
+                        <li><a href="contact.html" class="active" data-translate="nav.contact">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-controls">
+                    <!-- Language Switcher -->
+                    <div class="language-switcher">
+                        <button class="lang-btn" onclick="toggleLanguage()">
+                            <i class="fas fa-globe"></i>
+                            <span id="current-lang">EN</span>
+                        </button>
+                    </div>
+
+                    <!-- Dark Mode Toggle -->
+                    <div class="theme-toggle">
+                        <button class="theme-btn" onclick="toggleTheme()">
+                            <i class="fas fa-moon" id="theme-icon"></i>
+                        </button>
+                    </div>
+
+                    <!-- Mobile Menu Toggle -->
+                    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1 data-translate="contact.hero.title">Contact Us</h1>
+            <p data-translate="contact.hero.subtitle">Get in touch with our team for any questions or support</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-content">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h3 data-translate="contact.form.title">Send us a Message</h3>
+                    <p>We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+                    
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name" data-translate="contact.form.name">Full Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" data-translate="contact.form.email">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number (optional)">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject" data-translate="contact.form.subject">Subject</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="product">Product Information</option>
+                                <option value="support">Customer Support</option>
+                                <option value="partnership">Partnership Opportunity</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" data-translate="contact.form.message">Message</label>
+                            <textarea id="message" name="message" required placeholder="Tell us how we can help you..."></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn" data-translate="contact.form.send">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <div class="contact-info-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4 data-translate="contact.info.address">Our Address</h4>
+                        <p><strong>BDC - Best Quality in Cambodia</strong></p>
+                        <p>Phnom Penh Head Office</p>
+                        <p>S.I Building, #93, Preah Sihanouk Blvd</p>
+                        <p>Phnom Penh, Cambodia</p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h4 data-translate="contact.info.phone">Phone Number</h4>
+                        <p>Main Office: <a href="tel:+85589982999">(855) 89 982 999</a></p>
+                        <p>Alternative: <a href="tel:+85589935999">089 935 999</a></p>
+                        <p>Fax: <a href="tel:+85523215577">(855) 23 215 577</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Section -->
+            <div class="map-section">
+                <h2 class="section-title">Find Us</h2>
+                <p class="section-subtitle">Visit our headquarters in Phnom Penh</p>
+
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.7!2d104.9282!3d11.5564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDMzJzIzLjAiTiAxMDTCsDU1JzQxLjUiRQ!5e0!3m2!1sen!2skh!4v1234567890!5m2!1sen!2skh"
+                        width="100%"
+                        height="100%"
+                        style="border:0; border-radius: var(--border-radius-xl);"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    <div style="margin-top: 1rem; text-align: center;">
+                        <a href="https://maps.app.goo.gl/t1jrbH9Yg7xQCJ6b9" target="_blank" style="color: var(--primary-red); text-decoration: none; font-weight: 600;">
+                            <i class="fas fa-external-link-alt"></i> Open in Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-translate="footer.about.title">About CleanPro</h3>
+                    <p data-translate="footer.about.desc">Leading provider of premium cleaning solutions for homes and businesses worldwide. Trusted by millions for over 20 years.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3 data-translate="footer.quick_links.title">Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html" data-translate="nav.home">Home</a></li>
+                        <li><a href="products.html" data-translate="nav.products">Products</a></li>
+                        <li><a href="about.html" data-translate="nav.about">About Us</a></li>
+                        <li><a href="contact.html" data-translate="nav.contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 data-translate="footer.categories.title">Product Categories</h3>
+                    <ul>
+                        <li><a href="products.html#detergent-powder" data-translate="categories.detergent_powder">Detergent Powder</a></li>
+                        <li><a href="products.html#dishwashing" data-translate="categories.dishwashing">Dishwashing Liquid</a></li>
+                        <li><a href="products.html#floor-cleaner" data-translate="categories.floor_cleaner">Floor Cleaner</a></li>
+                        <li><a href="products.html#glass-cleaner" data-translate="categories.glass_cleaner">Glass Cleaner</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 data-translate="footer.contact.title">Contact Info</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> <span data-translate="footer.contact.phone">(855) 89 982 999</span></p>
+                        <p><i class="fas fa-envelope"></i> <span data-translate="footer.contact.email">info@cleanpro.com</span></p>
+                        <p><i class="fas fa-map-marker-alt"></i> <span data-translate="footer.contact.address">S.I Building, #93, Preah Sihanouk Blvd, Phnom Penh</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p data-translate="footer.copyright">&copy; 2024 CleanPro. All rights reserved. Professional cleaning solutions for every need.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/translations.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/main.js"></script>
+    
+
+</body>
+</html>
+
