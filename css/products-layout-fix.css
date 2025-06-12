@@ -81,6 +81,48 @@
     font-size: 1rem;
 }
 
+/* Ensure category icons display properly in Khmer mode */
+:lang(km) .category-item i, [lang="km"] .category-item i,
+:lang(km) .sidebar .fas, [lang="km"] .sidebar .fas,
+:lang(km) .sidebar .fab, [lang="km"] .sidebar .fab {
+    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+    font-weight: 900 !important;
+    font-style: normal !important;
+    display: inline-block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* High specificity fix for all FontAwesome icons in products page */
+html:lang(km) .sidebar i[class*="fa-"], html[lang="km"] .sidebar i[class*="fa-"],
+html:lang(km) .products-main i[class*="fa-"], html[lang="km"] .products-main i[class*="fa-"],
+html:lang(km) .category-item .fas, html[lang="km"] .category-item .fas,
+html:lang(km) .category-item .fab, html[lang="km"] .category-item .fab {
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 900 !important;
+    font-style: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    line-height: 1 !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    speak: never !important;
+    display: inline-block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    width: 18px !important;
+    text-align: center !important;
+}
+
+/* Brand icons in products page */
+html:lang(km) .sidebar .fab, html[lang="km"] .sidebar .fab,
+html:lang(km) .products-main .fab, html[lang="km"] .products-main .fab {
+    font-family: "Font Awesome 6 Brands" !important;
+    font-weight: 400 !important;
+}
+
 /* Products Main Area */
 .products-main {
     flex: 1;

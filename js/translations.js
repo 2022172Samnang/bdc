@@ -549,12 +549,40 @@ if (typeof getCookie === 'undefined') {
 class LanguageManager {
     constructor() {
         this.currentLanguage = getCookie('language') || localStorage.getItem('language') || 'en';
+        this.isInitialized = false;
         this.init();
     }
 
     init() {
-        this.applyTranslations();
-        this.updateLanguageButton();
+        // Wait for DOM to be ready if not already
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => {
+                this.initializeLanguage();
+            });
+        } else {
+            this.initializeLanguage();
+        }
+    }
+
+    initializeLanguage() {
+        try {
+            this.applyTranslations();
+            this.updateLanguageButton();
+            this.updateLanguageIcon();
+            this.isInitialized = true;
+            console.log('Language Manager initialized with language:', this.currentLanguage);
+
+            // Force update the document language attribute
+            document.documentElement.lang = this.currentLanguage === 'km' ? 'km' : 'en';
+
+            // Refresh all icons to ensure proper display on initialization
+            setTimeout(() => {
+                this.refreshAllIcons();
+            }, 200);
+
+        } catch (error) {
+            console.error('Error initializing language manager:', error);
+        }
     }
 
     applyTranslations() {
@@ -601,41 +629,219 @@ class LanguageManager {
         // Save to both cookie and localStorage for compatibility
         setCookie('language', language);
         localStorage.setItem('language', language);
+
         this.applyTranslations();
         this.updateLanguageButton();
+        this.updateLanguageIcon();
 
         // Update document language attribute
         document.documentElement.lang = language === 'km' ? 'km' : 'en';
+
+        // Refresh all icons to ensure proper display after language change
+        setTimeout(() => {
+            this.refreshAllIcons();
+        }, 100);
+
+        // Add visual feedback for language change
+        this.showLanguageChangeNotification(language);
 
         // Translate product content if function exists
         if (typeof refreshProductTranslations === 'function') {
             refreshProductTranslations();
         }
+
+        console.log('Language changed to:', language);
     }
 
     updateLanguageButton() {
         const langButton = document.getElementById('current-lang');
         if (langButton) {
-            langButton.textContent = this.currentLanguage === 'km' ? 'KM' : 'EN';
+            const newText = this.currentLanguage === 'km' ? 'KM' : 'EN';
+            langButton.textContent = newText;
+
+            // Add visual feedback only if language is actually changing
+            const parentButton = langButton.closest('.lang-btn');
+            if (parentButton && langButton.textContent !== newText) {
+                parentButton.classList.add('language-changing');
+                setTimeout(() => {
+                    parentButton.classList.remove('language-changing');
+                }, 300);
+            }
+
+            console.log('Language button updated to:', newText);
+        } else {
+            console.warn('Language button element not found');
         }
+    }
+
+    updateLanguageIcon() {
+        const langIcon = document.querySelector('.lang-btn i');
+        if (langIcon) {
+            // Ensure the globe icon is always visible
+            langIcon.className = 'fas fa-globe';
+            langIcon.style.opacity = '1';
+            langIcon.style.visibility = 'visible';
+            langIcon.style.display = 'inline-block';
+            langIcon.style.fontFamily = '"Font Awesome 6 Free"';
+            langIcon.style.fontWeight = '900';
+            langIcon.style.fontStyle = 'normal';
+            console.log('Language icon updated and made visible');
+        } else {
+            console.warn('Language icon element not found');
+        }
+    }
+
+    // New method to refresh all icons after language change
+    refreshAllIcons() {
+        // Refresh all FontAwesome icons to ensure proper display
+        const allIcons = document.querySelectorAll('.fas, .fab, .far, .fal, .fad, .fat, i[class*="fa-"]');
+        allIcons.forEach(icon => {
+            // Ensure proper font family without disrupting the display
+            if (icon.classList.contains('fab')) {
+                icon.style.fontFamily = '"Font Awesome 6 Brands"';
+                icon.style.fontWeight = '400';
+            } else {
+                icon.style.fontFamily = '"Font Awesome 6 Free"';
+                icon.style.fontWeight = '900';
+            }
+            icon.style.fontStyle = 'normal';
+            icon.style.fontVariant = 'normal';
+            icon.style.textTransform = 'none';
+            icon.style.lineHeight = '1';
+            icon.style.webkitFontSmoothing = 'antialiased';
+            icon.style.mozOsxFontSmoothing = 'grayscale';
+            icon.style.display = 'inline-block';
+            icon.style.opacity = '1';
+            icon.style.visibility = 'visible';
+        });
+
+        // Special handling for category icons
+        const categoryIcons = document.querySelectorAll('.category-item i, .sidebar i');
+        categoryIcons.forEach(icon => {
+            icon.style.width = '18px';
+            icon.style.textAlign = 'center';
+            icon.style.marginRight = '0.75rem';
+        });
+
+        console.log('All icons refreshed for language change');
+    }
+
+    showLanguageChangeNotification(language) {
+        // Create a subtle notification
+        const notification = document.createElement('div');
+        notification.className = 'language-notification';
+        notification.textContent = `Language changed to ${language === 'km' ? 'Khmer' : 'English'}`;
+        notification.style.cssText = `
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            background: var(--primary-red);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            z-index: 10000;
+            opacity: 0;
+            transform: translateX(100%);
+            transition: all 0.3s ease;
+        `;
+
+        document.body.appendChild(notification);
+
+        // Animate in
+        setTimeout(() => {
+            notification.style.opacity = '1';
+            notification.style.transform = 'translateX(0)';
+        }, 10);
+
+        // Remove after 2 seconds
+        setTimeout(() => {
+            notification.style.opacity = '0';
+            notification.style.transform = 'translateX(100%)';
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.parentNode.removeChild(notification);
+                }
+            }, 300);
+        }, 2000);
     }
 
     toggle() {
         const newLanguage = this.currentLanguage === 'en' ? 'km' : 'en';
+        console.log('Toggling language from', this.currentLanguage, 'to', newLanguage);
         this.setLanguage(newLanguage);
+    }
+
+    // Method to check current state
+    getState() {
+        return {
+            currentLanguage: this.currentLanguage,
+            isInitialized: this.isInitialized,
+            buttonElement: document.getElementById('current-lang'),
+            iconElement: document.querySelector('.lang-btn i')
+        };
     }
 }
 
 // Initialize language manager
-const languageManager = new LanguageManager();
+let languageManager;
+
+// Initialize language manager when DOM is ready
+function initializeLanguageManager() {
+    if (!languageManager) {
+        languageManager = new LanguageManager();
+        window.languageManager = languageManager; // Make globally accessible
+        console.log('Language Manager created and made globally accessible');
+    }
+    return languageManager;
+}
 
 // Global function for language toggle
 function toggleLanguage() {
-    languageManager.toggle();
+    const manager = languageManager || initializeLanguageManager();
+    manager.toggle();
 }
 
-// Initialize translations on page load
+// Initialize on page load with proper timing
 document.addEventListener('DOMContentLoaded', () => {
-    languageManager.applyTranslations();
+    // Small delay to ensure all elements are rendered
+    setTimeout(() => {
+        initializeLanguageManager();
+    }, 100);
 });
+
+// Also initialize immediately if DOM is already loaded
+if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    setTimeout(() => {
+        initializeLanguageManager();
+    }, 100);
+}
+
+// Additional initialization on window load to ensure everything is ready
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        const manager = initializeLanguageManager();
+        if (manager) {
+            manager.updateLanguageButton();
+            manager.updateLanguageIcon();
+        }
+    }, 200);
+});
+
+// Debug function for troubleshooting
+window.debugLanguage = function() {
+    const manager = languageManager || window.languageManager;
+    if (manager) {
+        console.log('Language Manager State:', manager.getState());
+        console.log('Cookie value:', getCookie('language'));
+        console.log('LocalStorage value:', localStorage.getItem('language'));
+    } else {
+        console.log('Language Manager not found');
+    }
+};
+
+// Ensure language manager is globally accessible
+if (languageManager) {
+    window.languageManager = languageManager;
+}
 

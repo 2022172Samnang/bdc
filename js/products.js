@@ -542,7 +542,9 @@ const productTranslations = {
 // Function to translate product content
 function translateProductContent() {
     // Check if we're in Khmer language mode
-    if (typeof languageManager !== 'undefined' && languageManager.currentLanguage === 'km') {
+    const manager = window.languageManager || (typeof languageManager !== 'undefined' ? languageManager : null);
+
+    if (manager && manager.currentLanguage === 'km') {
         const translations = productTranslations.km;
 
         // Translate product titles
@@ -560,15 +562,32 @@ function translateProductContent() {
                 categoryElement.textContent = translations[originalText];
             }
         });
+    } else if (manager && manager.currentLanguage === 'en') {
+        // Reset to English if needed
+        // This ensures proper switching back to English
+        setTimeout(() => {
+            if (typeof loadAllProducts === 'function') {
+                // Reload products to get original English text
+                const currentCategory = document.querySelector('.category-item.active')?.getAttribute('data-category') || 'all-products';
+                showCategory(currentCategory);
+            }
+        }, 50);
     }
 }
 
 // Function to refresh product translations when language changes
 function refreshProductTranslations() {
+    console.log('Refreshing product translations...');
     // Wait a bit for the DOM to update, then translate
     setTimeout(() => {
         translateProductContent();
-    }, 100);
+
+        // Also update category titles if needed
+        const manager = window.languageManager || (typeof languageManager !== 'undefined' ? languageManager : null);
+        if (manager) {
+            manager.applyTranslations();
+        }
+    }, 150);
 }
 
 // Create modern ecommerce product card HTML
@@ -1021,8 +1040,9 @@ function loadAllProducts() {
     updateCategoryTitle('all-products');
 
     // Apply translations to newly added content
-    if (typeof languageManager !== 'undefined') {
-        languageManager.applyTranslations();
+    const manager = window.languageManager || (typeof languageManager !== 'undefined' ? languageManager : null);
+    if (manager && manager.isInitialized) {
+        manager.applyTranslations();
     }
 
     // Ensure all functions are available globally after loading
@@ -1104,5 +1124,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Translate products if in Khmer mode after initial load
     setTimeout(() => {
         translateProductContent();
+
+        // Ensure language button is properly initialized
+        const manager = window.languageManager || (typeof languageManager !== 'undefined' ? languageManager : null);
+        if (manager) {
+            manager.updateLanguageButton();
+            manager.updateLanguageIcon();
+        }
     }, 1000);
 });
