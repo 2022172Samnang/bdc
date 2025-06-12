@@ -105,11 +105,16 @@
 }
 
 [data-theme="dark"] .hero-background {
-    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    background: url('../images/covers/lix_banner.jpg') center center/cover no-repeat !important;
+    filter: brightness(0.6) contrast(1.2) saturate(0.8) !important;
 }
 
 [data-theme="dark"] .hero-overlay {
-    background: rgba(17, 24, 39, 0.8);
+    background: linear-gradient(
+        135deg,
+        rgba(17, 24, 39, 0.8) 0%,
+        rgba(31, 41, 55, 0.9) 100%
+    ) !important;
 }
 
 [data-theme="dark"] .hero h1 {
