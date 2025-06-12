@@ -248,13 +248,13 @@ const productData = {
             rating: 4.7,
             reviews: 98,
             badge: 'New',
-            mainImage: '../images/products/lix_detergent_super_clean_purple.png',
+            mainImage: '../images/products/lix_detergent_super_clean_&_fresh_purple.jpg',
             thumbnails: [
-                '../images/products/lix_detergent_super_clean_purple.png'
+                '../images/products/lix_detergent_super_clean_&_fresh_purple.jpg'
             ],
             variants: [
-                { size: '110g', price: 0.25, originalPrice: 0.30, image: '../images/products/lix_detergent_super_clean_purple.png' },
-                { size: '3.7kg', price: 5.00, originalPrice: 5.75, image: '../images/products/lix_detergent_super_clean_purple.png' }
+                { size: '110g', price: 0.25, originalPrice: 0.30, image: '../images/products/lix_detergent_super_clean_&_fresh_purple.jpg' },
+                { size: '3.7kg', price: 5.00, originalPrice: 5.75, image: '../images/products/lix_detergent_super_clean_&_fresh_purple.jpg' }
             ],
             benefits: 'Detergent powder easily dissolves in water, has double the quality of stain removal, makes clothes as bright as new, and can be used in both machine and hand washing.',
             usage: 'Separate your white and colored clothes. Put 30 grams of detergent in 3-4 liters of water, stir to foam, and soak the clothes for 30 minutes or less. Wash with water 2-3 times and dry in the sun.',
@@ -275,16 +275,16 @@ const productData = {
                 '../images/products/lix_dishwashing_24_380ml.png',
                 '../images/products/lix_dishwashing_15_750ml.png',
                 '../images/products/lix_dishwashing_8_1500ml.png',
-                // '../images/products/lix_dishwashing_pump_1500ml.png',
-                // '../images/products/lix_dishwashing_3800ml.png'
+                '../images/products/lix_dishwashing_pump_1500ml.jpg',
+                '../images/products/lix_dishwashing_4_3800ml.jpg'
             ],
             variants: [
                 { size: '200ml', price: 0.3, originalPrice: 0.35, image: '../images/products/lix_dishwashing_48_200ml.jpg' },
                 { size: '380ml', price: 0.5, originalPrice: 0.60, image: '../images/products/lix_dishwashing_24_380ml.png' },
                 { size: '750ml', price: 0.875, originalPrice: 1.00, image: '../images/products/lix_dishwashing_15_750ml.png' },
                 { size: '1.5L', price: 1.75, originalPrice: 2.00, image: '../images/products/lix_dishwashing_8_1500ml.png' },
-                { size: '1.5L (Pump)', price: 1.75, originalPrice: 2.00, image: '../images/products/lix_dishwashing_pump_1500ml.png' },
-                { size: '3.8L', price: 3.75, originalPrice: 4.25, image: '../images/products/lix_dishwashing_3800ml.png' }
+                { size: '1.5L (Pump)', price: 1.75, originalPrice: 2.00, image: '../images/products/lix_dishwashing_pump_1500ml.jpg' },
+                { size: '3.8L', price: 3.75, originalPrice: 4.25, image: '../images/products/lix_dishwashing_4_3800ml.jpg' }
             ],
             benefits: 'Made from 100% natural lemon, double-strength oil removal, contains vitamin E to protect hand skin, and has a refreshing lemon scent.',
             usage: 'Mix 2 spoons of dishwashing liquid in 4-5 liters of water. Use a damp sponge to create soapy bubbles. Then wash the dishes thoroughly with water. Then wash the dishes with clean water.',
@@ -383,12 +383,12 @@ const productData = {
             rating: 4.8,
             reviews: 73,
             badge: 'Limited Edition',
-            mainImage: '../images/products/lix_detergent_lixquid_purple_sakura_4_3000ml.jpg',
+            mainImage: '../images/products/lix_detergent_lixquid_fresh_sakura_4_3000ml.jpg',
             thumbnails: [
-                '../images/products/lix_detergent_lixquid_purple_sakura_4_3000ml.jpg'
+                '../images/products/lix_detergent_lixquid_fresh_sakura_4_3000ml.jpg'
             ],
             variants: [
-                { size: '3L', price: 5.75, originalPrice: 6.50, image: '../images/products/lix_detergent_lixquid_purple_sakura_4_3000ml.jpg' }
+                { size: '3L', price: 5.75, originalPrice: 6.50, image: '../images/products/lix_detergent_lixquid_fresh_sakura_4_3000ml.jpg' }
             ],
             benefits: 'Double stains clean, make clothes smell of Sakura flowers, fragrant, lasting 24 hours, has a prize for every bottle, is of good quality, and is recognized as an International Organization for Standardization (ISO).',
             usage: 'Hand use: Separate the colors of the clothes, add 2 bottles of detergent liquid to 4-5 liters of water, soak for 30 minutes or less then this and get double the effect, then wash and rinse with clean water 2-3 times and dry in a sunny place. Machine use: Separate the colors of the clothes, add 2 caps of detergent liquid for 5-6 kg of clothes, add 1 cap for slightly stained clothes, and follow the instructions of the machine.',
@@ -606,10 +606,15 @@ function createProductCard(product) {
     const defaultVariant = product.variants[0];
     const discount = Math.round(((defaultVariant.originalPrice - defaultVariant.price) / defaultVariant.originalPrice) * 100);
 
-    console.log('Creating product card for:', product.id, 'Category:', product.category);
+    // Use the category key for data-category attribute (for filtering),
+    // but keep the original category for display
+    const categoryKey = product.categoryKey || product.category;
+    const displayCategory = product.originalCategory || product.category;
+
+
 
     return `
-        <div class="product-card" data-category="${product.category}" data-product-id="${product.id}">
+        <div class="product-card" data-category="${categoryKey}" data-product-id="${product.id}">
             <div class="product-content">
                 <!-- Product Image Section -->
                 <div class="product-image-section">
@@ -632,7 +637,7 @@ function createProductCard(product) {
                 <!-- Product Info Section -->
                 <div class="product-info-section">
                     <div class="product-header">
-                        <div class="product-category">${product.category}</div>
+                        <div class="product-category">${displayCategory}</div>
                         <h3 class="product-title">${product.title}</h3>
                         <div class="product-rating">
                             <div class="stars">
@@ -1006,13 +1011,20 @@ function loadProducts(category) {
 }
 
 // Load all products - IMPROVED VERSION
+let isLoadingProducts = false;
 function loadAllProducts() {
+    if (isLoadingProducts) {
+        console.log('Products already loading, skipping...');
+        return;
+    }
+
     const allGrid = document.getElementById('all-products-grid');
     if (!allGrid) {
         console.error('All products grid not found');
         return;
     }
 
+    isLoadingProducts = true;
     console.log('Loading all products...');
     allGrid.innerHTML = '';
     let totalCount = 0;
@@ -1021,9 +1033,11 @@ function loadAllProducts() {
         productData[categoryKey].forEach((product, index) => {
             // Create a copy to avoid modifying the original data
             const productCopy = { ...product };
-            // Set the category to the key for proper filtering
-            productCopy.category = categoryKey;
-            console.log(`Creating card for product ${totalCount}:`, productCopy.id, productCopy.title, 'Category:', categoryKey);
+            // Set the category key for proper filtering and preserve original category for display
+            productCopy.categoryKey = categoryKey;
+            productCopy.originalCategory = product.category;
+            productCopy.category = categoryKey; // This will be used as fallback
+
 
             const cardHTML = createProductCard(productCopy);
             allGrid.innerHTML += cardHTML;
@@ -1032,6 +1046,8 @@ function loadAllProducts() {
     });
 
     console.log('Total products loaded:', totalCount);
+
+
 
     // Update product count
     updateProductCount(totalCount);
@@ -1051,7 +1067,6 @@ function loadAllProducts() {
     // Verify that all product cards have proper data attributes
     setTimeout(() => {
         const cards = document.querySelectorAll('.product-card');
-        console.log('Verifying product cards...');
         cards.forEach((card, index) => {
             const productId = card.getAttribute('data-product-id');
             const category = card.getAttribute('data-category');
@@ -1059,6 +1074,8 @@ function loadAllProducts() {
                 console.error(`Card ${index} missing attributes:`, { productId, category });
             }
         });
+
+        isLoadingProducts = false;
     }, 100);
 }
 
