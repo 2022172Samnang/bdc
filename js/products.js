@@ -535,58 +535,171 @@ const productTranslations = {
         'Bleach': 'ទឹកអូសាវែល',
 
         // Toilet Cleaner
-        'Toilet Cleaner': 'ទឹកលាងបង្គន់'
+        'Toilet Cleaner': 'ទឹកលាងបង្គន់',
+
+        // Section Titles
+        'All Products': 'ផលិតផលទាំងអស់',
+
+        // Product Benefits - Detergent Powder
+        'Removes stains and odors on clothes, leaves a floral scent, gentle on hands; suitable for both machine and hand wash.': 'លុបបំបាត់ស្នាមប្រឡាក់ និងក្លិនអាក្រក់លើសម្លៀកបំពាក់ ទុកក្លិនផ្កាក្រអូប ទន់ភ្លន់ចំពោះដៃ សមស្របសម្រាប់ទាំងម៉ាស៊ីន និងលាងដៃ។',
+        'Whitens fabrics, natural lemon scent, gentle on hands; suitable for both machine and hand wash.': 'ធ្វើឱ្យក្រណាត់ស ក្លិនក្រូចឆ្មាធម្មជាតិ ទន់ភ្លន់ចំពោះដៃ សមស្របសម្រាប់ទាំងម៉ាស៊ីន និងលាងដៃ។',
+        'Dissolves easily, double stain-removal power, restores brightness; suitable for both machine and hand wash.': 'រលាយបានយ៉ាងងាយ អានុភាពលុបស្នាមប្រឡាក់ទ្វេដង ស្តារភាពភ្លឺ សមស្របសម្រាប់ទាំងម៉ាស៊ីន និងលាងដៃ។',
+        'Advanced formula with enhanced cleaning power, removes tough stains, long-lasting freshness; suitable for both machine and hand wash.': 'រូបមន្តកម្រិតខ្ពស់ជាមួយអានុភាពសម្អាតដែលបានកែលម្អ លុបបំបាត់ស្នាមប្រឡាក់រឹង ភាពស្រស់ស្អាតយូរអង្វែង សមស្របសម្រាប់ទាំងម៉ាស៊ីន និងលាងដៃ។',
+
+        // Product Benefits - Dishwashing
+        'Powerful grease-cutting formula, gentle on hands, pleasant fragrance, long-lasting suds for effective cleaning.': 'រូបមន្តកាត់ខ្លាញ់ដ៏មានអានុភាព ទន់ភ្លន់ចំពោះដៃ ក្លិនក្រអូប ពពុះយូរអង្វែងសម្រាប់ការសម្អាតប្រកបដោយប្រសិទ្ធភាព។',
+
+        // Product Benefits - Floor Cleaner
+        'Antibacterial formula kills 99.9% of germs, leaves floors sparkling clean, safe for all floor types.': 'រូបមន្តប្រឆាំងបាក់តេរីសម្លាប់មេរោគ 99.9% ធ្វើឱ្យកម្រាលភ្លឺថ្លា មានសុវត្ថិភាពសម្រាប់កម្រាលគ្រប់ប្រភេទ។',
+        'Lily and rose fragrance, effective cleaning power, leaves a fresh scent that lasts.': 'ក្លិនផ្កាលីលី និងកូលាប អានុភាពសម្អាតប្រកបដោយប្រសិទ្ធភាព ទុកក្លិនស្រស់ស្អាតយូរអង្វែង។',
+
+        // Product Benefits - Detergent Liquid
+        'Concentrated formula for tough stains, gentle on fabrics, maintains color brightness, eco-friendly ingredients.': 'រូបមន្តខ្ចាប់សម្រាប់ស្នាមប្រឡាក់រឹង ទន់ភ្លន់ចំពោះក្រណាត់ រក្សាភាពភ្លឺនៃពណ៌ សមាសធាតុមិត្តបរិស្ថាន។',
+        'Fresh sakura scent, powerful cleaning action, gentle on delicate fabrics, biodegradable formula.': 'ក្លិនផ្កាសាគូរ៉ាស្រស់ស្អាត សកម្មភាពសម្អាតដ៏មានអានុភាព ទន់ភ្លន់ចំពោះក្រណាត់ដែលងាយខូច រូបមន្តអាចរលាយបាន។',
+
+        // Product Benefits - Glass Cleaner
+        'Streak-free cleaning, anti-static formula, crystal clear results, suitable for mirrors and glass surfaces.': 'សម្អាតគ្មានស្នាម រូបមន្តប្រឆាំងអគ្គិសនី លទ្ធផលថ្លាដូចគ្រីស្តាល់ សមស្របសម្រាប់កញ្ចក់ និងផ្ទៃកញ្ចក់។',
+
+        // Product Benefits - Hand Washing
+        'Antibacterial protection, moisturizing formula, gentle cleansing, kills 99.9% of germs while keeping hands soft.': 'ការពារប្រឆាំងបាក់តេរី រូបមន្តផ្តល់សំណើម ការសម្អាតទន់ភ្លន់ សម្លាប់មេរោគ 99.9% ខណៈរក្សាដៃឱ្យទន់។',
+        'Sakura blossom fragrance, gentle on skin, moisturizing properties, effective antibacterial action.': 'ក្លិនផ្កាសាគូរ៉ា ទន់ភ្លន់ចំពោះស្បែក លក្ខណៈផ្តល់សំណើម សកម្មភាពប្រឆាំងបាក់តេរីប្រកបដោយប្រសិទ្ធភាព។',
+        'Bamboo charcoal formula, deep cleansing action, natural detoxification, gentle on sensitive skin.': 'រូបមន្តធ្យូងឫស្សី សកម្មភាពសម្អាតជ្រៅ ការបញ្ចេញពិសធម្មជាតិ ទន់ភ្លន់ចំពោះស្បែកងាយប្រតិកម្ម។',
+
+        // Product Benefits - Bleach
+        'Powerful whitening action, removes tough stains, disinfects surfaces, suitable for white fabrics and cleaning.': 'សកម្មភាពធ្វើឱ្យសដ៏មានអានុភាព លុបបំបាត់ស្នាមប្រឡាក់រឹង ធ្វើអនាម័យផ្ទៃ សមស្របសម្រាប់ក្រណាត់ស និងការសម្អាត។',
+
+        // Product Benefits - Toilet Cleaner
+        'Deep cleaning action, removes limescale and stains, fresh fragrance, kills bacteria and viruses effectively.': 'សកម្មភាពសម្អាតជ្រៅ លុបបំបាត់ស្នាមកំបោរ និងស្នាមប្រឡាក់ ក្លិនស្រស់ស្អាត សម្លាប់បាក់តេរី និងវីរុសប្រកបដោយប្រសិទ្ធភាព។',
+
+        // Usage Instructions
+        'Pour into washing machine or dissolve in water for hand wash. Use 1-2 scoops for regular load.': 'ចាក់ចូលម៉ាស៊ីនបោក ឬរលាយក្នុងទឹកសម្រាប់លាងដៃ។ ប្រើ 1-2 ស្លាបព្រាសម្រាប់បន្ទុកធម្មតា។',
+        'Apply directly to dishes or dilute in water. Rinse thoroughly after washing.': 'លាបដោយផ្ទាល់លើចាន ឬលាយក្នុងទឹក។ លាងឱ្យស្អាតបន្ទាប់ពីលាង។',
+        'Dilute with water according to floor type. Mop or wipe surfaces clean.': 'លាយជាមួយទឹកតាមប្រភេទកម្រាល។ ជូត ឬលុបផ្ទៃឱ្យស្អាត។',
+        'Apply to glass surface, wipe with clean cloth for streak-free shine.': 'លាបលើផ្ទៃកញ្ចក់ ជូតដោយក្រណាត់ស្អាតដើម្បីភាពភ្លឺគ្មានស្នាម។',
+        'Apply to wet hands, rub for 20 seconds, rinse with water.': 'លាបលើដៃសើម ដុសរយៈពេល 20 វិនាទី លាងដោយទឹក។',
+        'Dilute before use. Apply to stained areas, let sit, then rinse thoroughly.': 'លាយមុនប្រើ។ លាបលើកន្លែងមានស្នាមប្រឡាក់ ទុកមួយរំពេច បន្ទាប់មកលាងឱ្យស្អាត។',
+        'Apply around toilet bowl, let sit for 10 minutes, scrub and flush.': 'លាបជុំវិញបង្គន់ ទុករយៈពេល 10 នាទី ដុស និងបូមទឹក។'
     }
 };
 
 // Function to translate product content
 function translateProductContent() {
+    console.log('translateProductContent called');
+
     // Check if we're in Khmer language mode
     const manager = window.languageManager || (typeof languageManager !== 'undefined' ? languageManager : null);
 
-    if (manager && manager.currentLanguage === 'km') {
+    if (!manager) {
+        console.log('No language manager found');
+        return;
+    }
+
+    console.log('Current language:', manager.currentLanguage);
+
+    if (manager.currentLanguage === 'km') {
+        console.log('Translating to Khmer...');
         const translations = productTranslations.km;
 
         // Translate product titles
-        document.querySelectorAll('.product-title').forEach(titleElement => {
+        const titleElements = document.querySelectorAll('.product-title');
+        console.log('Found', titleElements.length, 'product titles');
+        titleElements.forEach(titleElement => {
             const originalText = titleElement.textContent.trim();
             if (translations[originalText]) {
+                // Store original text if not already stored
+                if (!titleElement.dataset.originalText) {
+                    titleElement.dataset.originalText = originalText;
+                }
                 titleElement.textContent = translations[originalText];
+                console.log('Translated title:', originalText, '->', translations[originalText]);
+            } else {
+                console.log('No translation found for title:', originalText);
             }
         });
 
         // Translate product categories
-        document.querySelectorAll('.product-category').forEach(categoryElement => {
+        const categoryElements = document.querySelectorAll('.product-category');
+        console.log('Found', categoryElements.length, 'product categories');
+        categoryElements.forEach(categoryElement => {
             const originalText = categoryElement.textContent.trim();
             if (translations[originalText]) {
+                // Store original text if not already stored
+                if (!categoryElement.dataset.originalText) {
+                    categoryElement.dataset.originalText = originalText;
+                }
                 categoryElement.textContent = translations[originalText];
+                console.log('Translated category:', originalText, '->', translations[originalText]);
+            } else {
+                console.log('No translation found for category:', originalText);
             }
         });
-    } else if (manager && manager.currentLanguage === 'en') {
-        // Reset to English if needed
-        // This ensures proper switching back to English
-        setTimeout(() => {
-            if (typeof loadAllProducts === 'function') {
-                // Reload products to get original English text
-                const currentCategory = document.querySelector('.category-item.active')?.getAttribute('data-category') || 'all-products';
-                showCategory(currentCategory);
+
+        // Translate product benefits
+        const contentElements = document.querySelectorAll('.tab-content p');
+        console.log('Found', contentElements.length, 'content elements');
+        contentElements.forEach(contentElement => {
+            const originalText = contentElement.textContent.trim();
+            if (translations[originalText]) {
+                // Store original text if not already stored
+                if (!contentElement.dataset.originalText) {
+                    contentElement.dataset.originalText = originalText;
+                }
+                contentElement.textContent = translations[originalText];
+                console.log('Translated content:', originalText.substring(0, 50) + '...', '->', translations[originalText].substring(0, 50) + '...');
             }
-        }, 50);
+        });
+
+        // Translate section titles in product cards
+        const sectionTitleElements = document.querySelectorAll('.section-title');
+        console.log('Found', sectionTitleElements.length, 'section titles');
+        sectionTitleElements.forEach(titleElement => {
+            const originalText = titleElement.textContent.trim();
+            if (translations[originalText]) {
+                // Store original text if not already stored
+                if (!titleElement.dataset.originalText) {
+                    titleElement.dataset.originalText = originalText;
+                }
+                titleElement.textContent = translations[originalText];
+                console.log('Translated section title:', originalText, '->', translations[originalText]);
+            }
+        });
+
+    } else if (manager.currentLanguage === 'en') {
+        console.log('Switching back to English...');
+        // Reset to English by restoring original text
+        const elementsWithOriginalText = document.querySelectorAll('[data-original-text]');
+        console.log('Found', elementsWithOriginalText.length, 'elements with original text');
+        elementsWithOriginalText.forEach(element => {
+            if (element.dataset.originalText) {
+                element.textContent = element.dataset.originalText;
+                console.log('Restored English text:', element.dataset.originalText);
+            }
+        });
     }
+
+    console.log('translateProductContent completed');
 }
 
 // Function to refresh product translations when language changes
 function refreshProductTranslations() {
     console.log('Refreshing product translations...');
+
+    // Get current language
+    const manager = window.languageManager || (typeof languageManager !== 'undefined' ? languageManager : null);
+    if (manager) {
+        console.log('Current language:', manager.currentLanguage);
+    }
+
     // Wait a bit for the DOM to update, then translate
     setTimeout(() => {
         translateProductContent();
 
         // Also update category titles if needed
-        const manager = window.languageManager || (typeof languageManager !== 'undefined' ? languageManager : null);
         if (manager) {
             manager.applyTranslations();
         }
+
+        console.log('Product translations refresh completed');
     }, 150);
 }
 
@@ -945,22 +1058,32 @@ function updateCategoryTitle(category) {
     const titleElement = document.getElementById('current-category-title');
     if (!titleElement) return;
 
-    // Define category display names
-    const categoryTitles = {
-        'all-products': 'All Products',
-        'detergent-powder': 'Detergent Powder',
-        'dishwashing': 'Dishwashing Liquid',
-        'floor-cleaner': 'Floor Cleaner',
-        'detergent-liquid': 'Detergent Liquid',
-        'glass-cleaner': 'Glass Cleaner',
-        'hand-washing': 'Hand Washing',
-        'bleach': 'Bleach',
-        'toilet-cleaner': 'Toilet Cleaner'
+    // Define category display names and their translation keys
+    const categoryInfo = {
+        'all-products': { title: 'All Products', translateKey: 'products.categories.all' },
+        'detergent-powder': { title: 'Detergent Powder', translateKey: 'categories.detergent_powder' },
+        'dishwashing': { title: 'Dishwashing Liquid', translateKey: 'categories.dishwashing' },
+        'floor-cleaner': { title: 'Floor Cleaner', translateKey: 'categories.floor_cleaner' },
+        'detergent-liquid': { title: 'Detergent Liquid', translateKey: 'categories.detergent_liquid' },
+        'glass-cleaner': { title: 'Glass Cleaner', translateKey: 'categories.glass_cleaner' },
+        'hand-washing': { title: 'Hand Washing', translateKey: 'categories.hand_washing' },
+        'bleach': { title: 'Bleach', translateKey: 'categories.bleach' },
+        'toilet-cleaner': { title: 'Toilet Cleaner', translateKey: 'categories.toilet_cleaner' }
     };
 
-    const title = categoryTitles[category] || 'All Products';
-    titleElement.textContent = title;
-    console.log('Category title updated to:', title);
+    const info = categoryInfo[category] || categoryInfo['all-products'];
+
+    // Set the title and translation attribute
+    titleElement.textContent = info.title;
+    titleElement.setAttribute('data-translate', info.translateKey);
+
+    // Apply translation if language manager is available
+    const manager = window.languageManager || (typeof languageManager !== 'undefined' ? languageManager : null);
+    if (manager && manager.isInitialized) {
+        manager.applyTranslations();
+    }
+
+    console.log('Category title updated to:', info.title, 'with translation key:', info.translateKey);
 }
 
 // Show category function - IMPROVED VERSION

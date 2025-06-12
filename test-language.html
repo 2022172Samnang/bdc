@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Test - BDC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+    <link rel="stylesheet" href="css/navbar-fix.css">
+    <link rel="stylesheet" href="css/products-layout-fix.css">
+    <style>
+        .test-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .debug-info {
+            background: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 12px;
+            margin: 10px 0;
+        }
+        .lang-btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .lang-btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>Language Switching Test</h1>
+        
+        <!-- Language Controls -->
+        <div class="test-section">
+            <h2>Language Controls</h2>
+            <button class="lang-btn" onclick="toggleLanguage()">
+                <i class="fas fa-globe"></i>
+                <span id="current-lang">EN</span>
+            </button>
+            <button class="lang-btn" onclick="testTranslations()">Test Translations</button>
+            <button class="lang-btn" onclick="debugLanguageState()">Debug State</button>
+        </div>
+
+        <!-- Test Elements -->
+        <div class="test-section">
+            <h2>Test Elements</h2>
+            <p data-translate="nav.home">Home</p>
+            <p data-translate="nav.products">Products</p>
+            <p data-translate="categories.detergent_powder">Detergent Powder</p>
+            <p data-translate="categories.dishwashing">Dishwashing Liquid</p>
+            
+            <!-- Product-like elements -->
+            <div class="product-title">Detergent Powder (Summer Flower)</div>
+            <div class="product-category">Detergent Powder</div>
+            <div class="section-title">All Products</div>
+        </div>
+
+        <!-- Debug Info -->
+        <div class="test-section">
+            <h2>Debug Information</h2>
+            <div id="debug-output" class="debug-info">
+                Debug information will appear here...
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/translations.js"></script>
+    <script src="js/products.js"></script>
+    <script>
+        function testTranslations() {
+            console.log('Testing translations...');
+            
+            // Test if functions exist
+            console.log('translateProductContent exists:', typeof translateProductContent === 'function');
+            console.log('refreshProductTranslations exists:', typeof refreshProductTranslations === 'function');
+            
+            // Test language manager
+            const manager = window.languageManager;
+            if (manager) {
+                console.log('Language manager found');
+                console.log('Current language:', manager.currentLanguage);
+                console.log('Is initialized:', manager.isInitialized);
+            } else {
+                console.log('Language manager not found');
+            }
+            
+            // Test product translations
+            if (typeof translateProductContent === 'function') {
+                translateProductContent();
+            }
+            
+            updateDebugInfo();
+        }
+        
+        function debugLanguageState() {
+            const manager = window.languageManager;
+            const debugInfo = {
+                languageManager: !!manager,
+                currentLanguage: manager ? manager.currentLanguage : 'N/A',
+                isInitialized: manager ? manager.isInitialized : 'N/A',
+                productTranslationsExists: typeof productTranslations !== 'undefined',
+                translateFunctionExists: typeof translateProductContent === 'function',
+                refreshFunctionExists: typeof refreshProductTranslations === 'function'
+            };
+            
+            console.log('Debug State:', debugInfo);
+            updateDebugInfo();
+        }
+        
+        function updateDebugInfo() {
+            const manager = window.languageManager;
+            const output = document.getElementById('debug-output');
+            
+            const info = `
+Language Manager: ${!!manager}
+Current Language: ${manager ? manager.currentLanguage : 'N/A'}
+Is Initialized: ${manager ? manager.isInitialized : 'N/A'}
+Product Translations Available: ${typeof productTranslations !== 'undefined'}
+Translate Function Available: ${typeof translateProductContent === 'function'}
+Refresh Function Available: ${typeof refreshProductTranslations === 'function'}
+
+Product Titles Found: ${document.querySelectorAll('.product-title').length}
+Product Categories Found: ${document.querySelectorAll('.product-category').length}
+Section Titles Found: ${document.querySelectorAll('.section-title').length}
+            `;
+            
+            output.textContent = info;
+        }
+        
+        // Initialize debug info on load
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                updateDebugInfo();
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
