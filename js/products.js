@@ -502,85 +502,53 @@ const productData = {
 };
 
 // Simple translation mapping for products
+// CORRECTED: The keys now exactly match the text in productData
 const productTranslations = {
     km: {
-        // Detergent Powder
+        // Categories & Titles
         'Detergent Powder (Summer Flower)': 'សាប៊ូម្សៅ (ផ្កា)',
         'Detergent Powder (Lemon)': 'សាប៊ូម្សៅ (ក្រូច)',
         'Detergent Powder (PISES)': 'សាប៊ូម្សៅ (ពិសេស)',
         'Detergent Powder (PISES SAKURA)': 'សាប៊ូម្សៅ (ផ្កាសាគូរ៉ា)',
         'Detergent Super Clean & Fresh Purple': 'សាប៊ូម្សៅ Super Clean & Fresh Purple',
         'Detergent Powder': 'សាប៊ូម្សៅ',
-
-        // Dishwashing
         'Dishwashing Liquid': 'ទឹកសាប៊ូលាងចាន',
         'Dishwashing': 'ទឹកសាប៊ូលាងចាន',
-
-        // Floor Cleaner
         'Floor Cleaner (Antibacterial)': 'ទឹកជូតការ៉ូ (ប្រឆាំងបាក់តេរី)',
         'Floor Cleaner (Lily & Rose)': 'ទឹកជូតឥដ្ឋការ៉ូ ផ្កាលីលី និងកូលាប',
         'Floor Cleaner': 'ទឹកជូតឥដ្ឋការ៉ូ',
-
-        // Detergent Liquid
         'Detergent Liquid': 'ទឹកបោកសម្លៀកបំពាក់',
         'Detergent Liquid SAKURA': 'ទឹកបោកសម្លៀកបំពាក់ សាគូរ៉ា',
-
-        // Glass Cleaner
         'Glass Cleaner': 'ទឹកជូតកញ្ចក់',
-
-        // Hand Washing
         'Lix Hand Washing': 'ទឹកលាងដៃ Lix',
         'Hand Washing': 'ទឹកលាងដៃ Lix',
-
-        // Bleach
         'Ojavel': 'ទឹកអូសាវែល',
         'Bleach': 'ទឹកអូសាវែល',
-
-        // Toilet Cleaner
         'Toilet Cleaner': 'ទឹកលាងបង្គន់',
-
-        // Section Titles
         'All Products': 'ផលិតផលទាំងអស់',
 
-        // Product Benefits - Detergent Powder
-        'Removes stains and odors on clothes, leaves a floral scent, gentle on hands; suitable for both machine and hand wash.': 'លុបបំបាត់ស្នាមប្រឡាក់ និងក្លិនអាក្រក់លើសម្លៀកបំពាក់ ទុកក្លិនផ្កាក្រអូប ទន់ភ្លន់ចំពោះដៃ សមស្របសម្រាប់ទាំងម៉ាស៊ីន និងលាងដៃ។',
-        'Whitens fabrics, natural lemon scent, gentle on hands; suitable for both machine and hand wash.': 'ធ្វើឱ្យក្រណាត់ស ក្លិនក្រូចឆ្មាធម្មជាតិ ទន់ភ្លន់ចំពោះដៃ សមស្របសម្រាប់ទាំងម៉ាស៊ីន និងលាងដៃ។',
-        'Dissolves easily, double stain-removal power, restores brightness; suitable for both machine and hand wash.': 'រលាយបានយ៉ាងងាយ អានុភាពលុបស្នាមប្រឡាក់ទ្វេដង ស្តារភាពភ្លឺ សមស្របសម្រាប់ទាំងម៉ាស៊ីន និងលាងដៃ។',
-        'Advanced formula with enhanced cleaning power, removes tough stains, long-lasting freshness; suitable for both machine and hand wash.': 'រូបមន្តកម្រិតខ្ពស់ជាមួយអានុភាពសម្អាតដែលបានកែលម្អ លុបបំបាត់ស្នាមប្រឡាក់រឹង ភាពស្រស់ស្អាតយូរអង្វែង សមស្របសម្រាប់ទាំងម៉ាស៊ីន និងលាងដៃ។',
+        // --- CORRECTED BENEFITS ---
+        'Removes stains and odors on clothes, smells like flowers on the fabric, does not cut hands and can be used both machine and hand wash.': 'លុបបំបាត់ស្នាមប្រឡាក់ និងក្លិនអាក្រក់លើសម្លៀកបំពាក់ ទុកក្លិនផ្កាក្រអូប ទន់ភ្លន់ចំពោះដៃ សមស្របសម្រាប់ទាំងម៉ាស៊ីន និងលាងដៃ។',
+        'Helps make fabrics whiter, has a natural lemon scent, does not cut hands, and can be used in both machine and hand wash.': 'ជួយធ្វើឱ្យក្រណាត់ស ក្លិនក្រូចឆ្មាធម្មជាតិ ទន់ភ្លន់ចំពោះដៃ សមស្របសម្រាប់ទាំងម៉ាស៊ីន និងលាងដៃ។',
+        'Detergent powder easily dissolves in water, has double the quality of stain removal, makes clothes as bright as new, and can be used in both machine and hand washing.': 'សាប៊ូម្សៅរលាយក្នុងទឹកបានយ៉ាងងាយស្រួល មានគុណភាពទ្វេដងក្នុងការលុបបំបាត់ស្នាមប្រឡាក់ ធ្វើឱ្យសម្លៀកបំពាក់ភ្លឺដូចថ្មី ហើយអាចប្រើបានទាំងម៉ាស៊ីន និងបោកគក់ដោយដៃ។',
+        'Made from 100% natural lemon, double-strength oil removal, contains vitamin E to protect hand skin, and has a refreshing lemon scent.': 'ផលិតពីក្រូចឆ្មាធម្មជាតិ 100% កំចាត់ជាតិខ្លាញ់បានពីរដង មានផ្ទុកវីតាមីន E ការពារស្បែកដៃ និងមានក្លិនក្រូចឆ្មាស្រស់ស្រាយ។',
+        'Cleans stains, dust and grease on the tile quickly and efficiently, makes the tile shiny and pest control up to 99.9%.': 'សម្អាតស្នាមប្រឡាក់ ធូលី និងជាតិខាញ់នៅលើក្បឿងបានយ៉ាងឆាប់រហ័ស និងមានប្រសិទ្ធភាព ធ្វើឱ្យក្បឿងភ្លឺចែងចាំង និងកំចាត់សត្វល្អិតបានដល់ទៅ 99.9%។',
+        'Highly effective in penetrating deep into the fabric to clean stains stuck to the fabric and keep the fabric quality as new. Can be used for both hand and machine washing.': 'មានប្រសិទ្ធភាពខ្ពស់ក្នុងការជ្រាបចូលជ្រៅទៅក្នុងក្រណាត់ដើម្បីសម្អាតស្នាមប្រឡាក់ដែលជាប់នឹងក្រណាត់ និងរក្សាគុណភាពក្រណាត់ឱ្យថ្មីដូចដើម។ អាចប្រើបានសម្រាប់ទាំងលាងដៃ និងម៉ាស៊ីន។',
+        'Double stains clean, make clothes smell of Sakura flowers, fragrant, lasting 24 hours, has a prize for every bottle, is of good quality, and is recognized as an International Organization for Standardization (ISO).': 'សម្អាតស្នាមប្រឡាក់ទ្វេដង ធ្វើឱ្យសម្លៀកបំពាក់មានក្លិនផ្កាសាគូរ៉ា ក្រអូប ប្រកបដោយភាពយូរអង្វែង 24 ម៉ោង មានរង្វាន់សម្រាប់ដបនីមួយៗ មានគុណភាពល្អ និងត្រូវបានទទួលស្គាល់ដោយអង្គការស្តង់ដារអន្តរជាតិ (ISO)។',
+        'Highly effective in cleaning glass, keeps glass quality as good as new, removes stains and dust well, and has a pleasant scent.': 'មានប្រសិទ្ធភាពខ្ពស់ក្នុងការសម្អាតកញ្ចក់ រក្សាគុណភាពកញ្ចក់ឱ្យល្អដូចថ្មី លុបបំបាត់ស្នាមប្រឡាក់ និងធូលីបានល្អ និងមានក្លិនក្រអូប។',
+        'Makes the skin soft and fragrant, removes dirt and bacteria up to 99.9%.': 'ធ្វើឱ្យស្បែកទន់ និងក្រអូប លុបបំបាត់ភាពកខ្វក់ និងបាក់តេរីរហូតដល់ 99.9%។',
+        'Highly effective in removing stains, removing bad odors and other bacteria, and does not harm the skin of the hand.': 'មានប្រសិទ្ធភាពខ្ពស់ក្នុងការលុបបំបាត់ស្នាមប្រឡាក់ លុបបំបាត់ក្លិនអាក្រក់ និងបាក់តេរីផ្សេងៗ និងមិនបង្កគ្រោះថ្នាក់ដល់ស្បែកដៃ។',
+        'Keeps your toilet clean, odor-free, can remove up to 99.99% of dirt stuck in the toilet, and effectively removes bad odors and other bacteria.': 'រក្សាបង្គន់របស់អ្នកឱ្យស្អាត គ្មានក្លិន អាចលុបបំបាត់ភាពកខ្វក់ដែលជាប់នឹងបង្គន់រហូតដល់ 99.99% និងលុបបំបាត់ក្លិនអាក្រក់ និងបាក់តេរីផ្សេងៗបានប្រកបដោយប្រសិទ្ធភាព។',
 
-        // Product Benefits - Dishwashing
-        'Powerful grease-cutting formula, gentle on hands, pleasant fragrance, long-lasting suds for effective cleaning.': 'រូបមន្តកាត់ខ្លាញ់ដ៏មានអានុភាព ទន់ភ្លន់ចំពោះដៃ ក្លិនក្រអូប ពពុះយូរអង្វែងសម្រាប់ការសម្អាតប្រកបដោយប្រសិទ្ធភាព។',
-
-        // Product Benefits - Floor Cleaner
-        'Antibacterial formula kills 99.9% of germs, leaves floors sparkling clean, safe for all floor types.': 'រូបមន្តប្រឆាំងបាក់តេរីសម្លាប់មេរោគ 99.9% ធ្វើឱ្យកម្រាលភ្លឺថ្លា មានសុវត្ថិភាពសម្រាប់កម្រាលគ្រប់ប្រភេទ។',
-        'Lily and rose fragrance, effective cleaning power, leaves a fresh scent that lasts.': 'ក្លិនផ្កាលីលី និងកូលាប អានុភាពសម្អាតប្រកបដោយប្រសិទ្ធភាព ទុកក្លិនស្រស់ស្អាតយូរអង្វែង។',
-
-        // Product Benefits - Detergent Liquid
-        'Concentrated formula for tough stains, gentle on fabrics, maintains color brightness, eco-friendly ingredients.': 'រូបមន្តខ្ចាប់សម្រាប់ស្នាមប្រឡាក់រឹង ទន់ភ្លន់ចំពោះក្រណាត់ រក្សាភាពភ្លឺនៃពណ៌ សមាសធាតុមិត្តបរិស្ថាន។',
-        'Fresh sakura scent, powerful cleaning action, gentle on delicate fabrics, biodegradable formula.': 'ក្លិនផ្កាសាគូរ៉ាស្រស់ស្អាត សកម្មភាពសម្អាតដ៏មានអានុភាព ទន់ភ្លន់ចំពោះក្រណាត់ដែលងាយខូច រូបមន្តអាចរលាយបាន។',
-
-        // Product Benefits - Glass Cleaner
-        'Streak-free cleaning, anti-static formula, crystal clear results, suitable for mirrors and glass surfaces.': 'សម្អាតគ្មានស្នាម រូបមន្តប្រឆាំងអគ្គិសនី លទ្ធផលថ្លាដូចគ្រីស្តាល់ សមស្របសម្រាប់កញ្ចក់ និងផ្ទៃកញ្ចក់។',
-
-        // Product Benefits - Hand Washing
-        'Antibacterial protection, moisturizing formula, gentle cleansing, kills 99.9% of germs while keeping hands soft.': 'ការពារប្រឆាំងបាក់តេរី រូបមន្តផ្តល់សំណើម ការសម្អាតទន់ភ្លន់ សម្លាប់មេរោគ 99.9% ខណៈរក្សាដៃឱ្យទន់។',
-        'Sakura blossom fragrance, gentle on skin, moisturizing properties, effective antibacterial action.': 'ក្លិនផ្កាសាគូរ៉ា ទន់ភ្លន់ចំពោះស្បែក លក្ខណៈផ្តល់សំណើម សកម្មភាពប្រឆាំងបាក់តេរីប្រកបដោយប្រសិទ្ធភាព។',
-        'Bamboo charcoal formula, deep cleansing action, natural detoxification, gentle on sensitive skin.': 'រូបមន្តធ្យូងឫស្សី សកម្មភាពសម្អាតជ្រៅ ការបញ្ចេញពិសធម្មជាតិ ទន់ភ្លន់ចំពោះស្បែកងាយប្រតិកម្ម។',
-
-        // Product Benefits - Bleach
-        'Powerful whitening action, removes tough stains, disinfects surfaces, suitable for white fabrics and cleaning.': 'សកម្មភាពធ្វើឱ្យសដ៏មានអានុភាព លុបបំបាត់ស្នាមប្រឡាក់រឹង ធ្វើអនាម័យផ្ទៃ សមស្របសម្រាប់ក្រណាត់ស និងការសម្អាត។',
-
-        // Product Benefits - Toilet Cleaner
-        'Deep cleaning action, removes limescale and stains, fresh fragrance, kills bacteria and viruses effectively.': 'សកម្មភាពសម្អាតជ្រៅ លុបបំបាត់ស្នាមកំបោរ និងស្នាមប្រឡាក់ ក្លិនស្រស់ស្អាត សម្លាប់បាក់តេរី និងវីរុសប្រកបដោយប្រសិទ្ធភាព។',
-
-        // Usage Instructions
-        'Pour into washing machine or dissolve in water for hand wash. Use 1-2 scoops for regular load.': 'ចាក់ចូលម៉ាស៊ីនបោក ឬរលាយក្នុងទឹកសម្រាប់លាងដៃ។ ប្រើ 1-2 ស្លាបព្រាសម្រាប់បន្ទុកធម្មតា។',
-        'Apply directly to dishes or dilute in water. Rinse thoroughly after washing.': 'លាបដោយផ្ទាល់លើចាន ឬលាយក្នុងទឹក។ លាងឱ្យស្អាតបន្ទាប់ពីលាង។',
-        'Dilute with water according to floor type. Mop or wipe surfaces clean.': 'លាយជាមួយទឹកតាមប្រភេទកម្រាល។ ជូត ឬលុបផ្ទៃឱ្យស្អាត។',
-        'Apply to glass surface, wipe with clean cloth for streak-free shine.': 'លាបលើផ្ទៃកញ្ចក់ ជូតដោយក្រណាត់ស្អាតដើម្បីភាពភ្លឺគ្មានស្នាម។',
-        'Apply to wet hands, rub for 20 seconds, rinse with water.': 'លាបលើដៃសើម ដុសរយៈពេល 20 វិនាទី លាងដោយទឹក។',
-        'Dilute before use. Apply to stained areas, let sit, then rinse thoroughly.': 'លាយមុនប្រើ។ លាបលើកន្លែងមានស្នាមប្រឡាក់ ទុកមួយរំពេច បន្ទាប់មកលាងឱ្យស្អាត។',
-        'Apply around toilet bowl, let sit for 10 minutes, scrub and flush.': 'លាបជុំវិញបង្គន់ ទុករយៈពេល 10 នាទី ដុស និងបូមទឹក។'
+        // --- CORRECTED USAGE ---
+        'Separate your white and colored clothes. Put 30 grams of detergent in 3-4 liters of water, stir to foam, and soak the clothes for 30 minutes or less. Wash with water 2-3 times and dry in the sun.': 'ញែកសម្លៀកបំពាក់ស និងពណ៌របស់អ្នក។ ដាក់សាប៊ូបោកខោអាវ 30 ក្រាមក្នុងទឹក 3-4 លីត្រ កូរឱ្យចេញពពុះ ហើយត្រាំសម្លៀកបំពាក់រយៈពេល 30 នាទីឬតិចជាងនេះ។ បោកជាមួយទឹក 2-3 ដងហើយហាលថ្ងៃ។',
+        'Mix 2 spoons of dishwashing liquid in 4-5 liters of water. Use a damp sponge to create soapy bubbles. Then wash the dishes thoroughly with water. Then wash the dishes with clean water.': 'លាយ​ទឹក​លាង​ចាន ២ ស្លាបព្រា​បាយ​ក្នុង​ទឹក ៤-៥ លីត្រ។ ប្រើអេប៉ុងសើមដើម្បីបង្កើតពពុះសាប៊ូ។ បន្ទាប់​មក​លាង​ចាន​ឱ្យ​បាន​ស្អាត​ជាមួយ​ទឹក។ បន្ទាប់​មក​លាង​ចាន​ដោយ​ទឹក​ស្អាត។',
+        'Mix 2 caps of Floor cleaner with 2.5 liters of water for daily cleaning. Mix 2 caps of Floor cleaner with 1 liter of water for cleaning and killing bacteria. Use pure Floor cleaner to clean heavily stained areas.': 'លាយទឹកជូតកម្រាល 2 គម្រប ជាមួយទឹក 2.5 លីត្រ សម្រាប់សម្អាតប្រចាំថ្ងៃ។ លាយទឹកជូតកម្រាល 2 គម្រប ជាមួយទឹក 1 លីត្រ សម្រាប់សម្អាត និងសម្លាប់បាក់តេរី។ ប្រើទឹកជូតកម្រាលសុទ្ធដើម្បីសម្អាតកន្លែងដែលមានស្នាមប្រឡាក់ខ្លាំង។',
+        'Hand use: Separate the colors of the clothes, add 2 bottles of detergent liquid to 4-5 liters of water, soak for 30 minutes or less then this and get double the effect, then wash and rinse with clean water 2-3 times and dry in a sunny place. Machine use: Separate the colors of the clothes, add 2 caps of detergent liquid for 5-6 kg of clothes, add 1 cap for slightly stained clothes, and follow the instructions of the machine.': 'ការប្រើប្រាស់ដោយដៃ៖ បំបែកពណ៌សម្លៀកបំពាក់ បន្ថែមទឹកបោក 2 ដប ទៅក្នុងទឹក 4-5 លីត្រ ត្រាំរយៈពេល 30 នាទី ឬតិចជាងនេះ ហើយទទួលបានប្រសិទ្ធភាពទ្វេដង បន្ទាប់មកលាង និងលាងដោយទឹកស្អាត 2-3 ដង ហើយហាលនៅកន្លែងមានពន្លឺថ្ងៃ។ ការប្រើប្រាស់ម៉ាស៊ីន៖ បំបែកពណ៌សម្លៀកបំពាក់ បន្ថែមទឹកបោក 2 មួក សម្រាប់សម្លៀកបំពាក់ 5-6 គីឡូក្រាម បន្ថែម 1 មួក សម្រាប់សម្លៀកបំពាក់ដែលមានស្នាមប្រឡាក់តិចតួច ហើយធ្វើតាមការណែនាំរបស់ម៉ាស៊ីន។',
+        'Rotate the spray head at the end of the machine from "large spray" to "small spray". Spray directly onto the dirty and stained surface, leave for 2 minutes, then use a cloth to wipe away all stains. Rotate the spray head to the "off" position after use.': 'បង្វិលក្បាលបាញ់នៅចុងម៉ាស៊ីនពី "បាញ់ធំ" ទៅ "បាញ់តូច"។ បាញ់ដោយផ្ទាល់លើផ្ទៃកខ្វក់ និងមានស្នាមប្រឡាក់ ទុករយៈពេល 2 នាទី បន្ទាប់មកប្រើក្រណាត់ជូតស្នាមប្រឡាក់ទាំងអស់។ បង្វិលក្បាលបាញ់ទៅទីតាំង "បិទ" បន្ទាប់ពីប្រើប្រាស់។',
+        'Twist the lid upwards. Press the lid to release the hand soap. Scrub with water for 10-20 seconds. Then rinse with clean water.': 'បង្វិលគម្របឡើងលើ។ ចុចគម្របដើម្បីបញ្ចេញសាប៊ូលាងដៃ។ ដុសជាមួយទឹករយៈពេល 10-20 វិនាទី។ បន្ទាប់មកលាងដោយទឹកស្អាត។',
+        'For use on white clothes and fabrics. Pour 30 ml of Ojavel into 10 liters of water and add soap as usual. Add clothes, soak for 5 minutes, then wash as usual.': 'សម្រាប់ប្រើលើសម្លៀកបំពាក់ស និងក្រណាត់។ ចាក់ Ojavel 30 មីលីលីត្រ ទៅក្នុងទឹក 10 លីត្រ ហើយបន្ថែមសាប៊ូតាមធម្មតា។ បន្ថែមសម្លៀកបំពាក់ ត្រាំរយៈពេល 5 នាទី បន្ទាប់មកលាងតាមធម្មតា។',
+        'For toilet bowls: Spray LIX Toilet Cleaner directly into and around the rim of the toilet bowl, wait a moment, then use a toilet brush to scrub and clean, then rinse thoroughly with water. For bathroom tiles and walls: Spray LIX Toilet Cleaner directly onto bathroom tiles and walls, scrub to remove stains, then rinse thoroughly with water.': 'សម្រាប់បង្គន់៖ បាញ់ទឹកលាងបង្គន់ LIX ដោយផ្ទាល់ចូលទៅក្នុង និងជុំវិញគែមបង្គន់ រង់ចាំមួយរំពេច បន្ទាប់មកប្រើច្រាសបង្គន់ដុស និងសម្អាត បន្ទាប់មកលាងឱ្យស្អាតដោយទឹក។ សម្រាប់ក្រាលក្បឿង និងជញ្ជាំងបន្ទប់ទឹក៖ បាញ់ទឹកលាងបង្គន់ LIX ដោយផ្ទាល់លើក្រាលក្បឿង និងជញ្ជាំងបន្ទប់ទឹក ដុសដើម្បីលុបបំបាត់ស្នាមប្រឡាក់ បន្ទាប់មកលាងឱ្យស្អាតដោយទឹក។'
     }
 };
 
@@ -682,6 +650,9 @@ function translateProductContent() {
     console.log('translateProductContent completed');
 }
 
+// Make the function globally accessible
+window.translateProductContent = translateProductContent;
+
 // Function to refresh product translations when language changes
 function refreshProductTranslations() {
     console.log('Refreshing product translations...');
@@ -704,6 +675,9 @@ function refreshProductTranslations() {
         console.log('Product translations refresh completed');
     }, 150);
 }
+
+// Make the function globally accessible
+window.refreshProductTranslations = refreshProductTranslations;
 
 // Create modern ecommerce product card HTML
 function createProductCard(product) {
@@ -1184,6 +1158,11 @@ function loadAllProducts() {
     const manager = window.languageManager || (typeof languageManager !== 'undefined' ? languageManager : null);
     if (manager && manager.isInitialized) {
         manager.applyTranslations();
+
+        // Also translate product content if in Khmer mode
+        setTimeout(() => {
+            translateProductContent();
+        }, 100);
     }
 
     // Ensure all functions are available globally after loading
