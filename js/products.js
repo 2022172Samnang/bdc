@@ -351,48 +351,56 @@ const productData = {
                 '../images/products/lix_detergent_lixquid_perfume_4_4000ml.png'
             ],
             variants: [
-                { size: '4L', price: 5.875, originalPrice: 6.75, image: '../images/products/lix_detergent_lixquid_4_4000ml.png' },
-                { size: '4L (Perfume)', price: 5.875, originalPrice: 6.75, image: '../images/products/lix_detergent_lixquid_perfume_4_4000ml.png' }
+                {
+                    size: '4L Regular',
+                    price: 5.875,
+                    originalPrice: 6.75,
+                    image: '../images/products/lix_detergent_lixquid_4_4000ml.png',
+                    variant: 'Regular'
+                },
+                {
+                    size: '4L Perfume',
+                    price: 5.875,
+                    originalPrice: 6.75,
+                    image: '../images/products/lix_detergent_lixquid_perfume_4_4000ml.png',
+                    variant: 'Perfume'
+                }
             ],
             benefits: 'Highly effective in penetrating deep into the fabric to clean stains stuck to the fabric and keep the fabric quality as new. Can be used for both hand and machine washing.',
             usage: 'Hand use: Separate the colors of the clothes, add 2 bottles of detergent liquid to 4-5 liters of water, soak for 30 minutes or less then this and get double the effect, then wash and rinse with clean water 2-3 times and dry in a sunny place. Machine use: Separate the colors of the clothes, add 2 caps of detergent liquid for 5-6 kg of clothes, add 1 cap for slightly stained clothes, and follow the instructions of the machine.',
             features: ['Concentrated Formula', 'Tough Stain Removal', 'Machine Compatible', 'Gentle on Fabrics']
         },
         {
-            id: 'fresh-sakura',
-            title: 'Detergent Liquid Fresh SAKURA',
+            id: 'detergent-liquid-sakura',
+            title: 'Detergent Liquid SAKURA',
             category: 'Detergent Liquid',
             rating: 4.8,
-            reviews: 67,
+            reviews: 140,
             badge: 'Limited Edition',
             mainImage: '../images/products/lix_detergent_lixquid_fresh_sakura_4_3000ml.jpg',
             thumbnails: [
-                '../images/products/lix_detergent_lixquid_fresh_sakura_4_3000ml.jpg'
+                '../images/products/lix_detergent_lixquid_fresh_sakura_4_3000ml.jpg',
+                '../images/products/lix_detergent_lixquid_purple_sakura_4_3000ml.jpg'
             ],
             variants: [
-                { size: '3L', price: 5.75, originalPrice: 6.50, image: '../images/products/lix_detergent_lixquid_fresh_sakura_4_3000ml.jpg' }
+                {
+                    size: '3L Fresh SAKURA',
+                    price: 5.75,
+                    originalPrice: 6.50,
+                    image: '../images/products/lix_detergent_lixquid_fresh_sakura_4_3000ml.jpg',
+                    variant: 'Fresh SAKURA'
+                },
+                {
+                    size: '3L Purple SAKURA',
+                    price: 5.75,
+                    originalPrice: 6.50,
+                    image: '../images/products/lix_detergent_lixquid_purple_sakura_4_3000ml.jpg',
+                    variant: 'Purple SAKURA'
+                }
             ],
             benefits: 'Double stains clean, make clothes smell of Sakura flowers, fragrant, lasting 24 hours, has a prize for every bottle, is of good quality, and is recognized as an International Organization for Standardization (ISO).',
             usage: 'Hand use: Separate the colors of the clothes, add 2 bottles of detergent liquid to 4-5 liters of water, soak for 30 minutes or less then this and get double the effect, then wash and rinse with clean water 2-3 times and dry in a sunny place. Machine use: Separate the colors of the clothes, add 2 caps of detergent liquid for 5-6 kg of clothes, add 1 cap for slightly stained clothes, and follow the instructions of the machine.',
             features: ['Sakura Fragrance', 'Double Clean', 'ISO Certified', 'Limited Edition']
-        },
-        {
-            id: 'purple-sakura',
-            title: 'Detergent Liquid Purple SAKURA',
-            category: 'Detergent Liquid',
-            rating: 4.8,
-            reviews: 73,
-            badge: 'Limited Edition',
-            mainImage: '../images/products/lix_detergent_lixquid_fresh_sakura_4_3000ml.jpg',
-            thumbnails: [
-                '../images/products/lix_detergent_lixquid_fresh_sakura_4_3000ml.jpg'
-            ],
-            variants: [
-                { size: '3L', price: 5.75, originalPrice: 6.50, image: '../images/products/lix_detergent_lixquid_fresh_sakura_4_3000ml.jpg' }
-            ],
-            benefits: 'Double stains clean, make clothes smell of Sakura flowers, fragrant, lasting 24 hours, has a prize for every bottle, is of good quality, and is recognized as an International Organization for Standardization (ISO).',
-            usage: 'Hand use: Separate the colors of the clothes, add 2 bottles of detergent liquid to 4-5 liters of water, soak for 30 minutes or less then this and get double the effect, then wash and rinse with clean water 2-3 times and dry in a sunny place. Machine use: Separate the colors of the clothes, add 2 caps of detergent liquid for 5-6 kg of clothes, add 1 cap for slightly stained clothes, and follow the instructions of the machine.',
-            features: ['Purple Sakura', 'Double Clean', 'ISO Certified', 'Limited Edition']
         }
     ],
     'glass-cleaner': [
@@ -419,40 +427,36 @@ const productData = {
     ],
     'hand-washing': [
         {
-            id: 'hand-washing-sakura',
-            title: 'Lix Hand Washing Sakura Blossom',
+            id: 'hand-washing',
+            title: 'Lix Hand Washing',
             category: 'Hand Washing',
             rating: 4.6,
             reviews: 89,
             badge: 'Gentle Care',
             mainImage: '../images/products/lix_hand_washing_sakura_blossom_12_500ml.png',
             thumbnails: [
-                '../images/products/lix_hand_washing_sakura_blossom_12_500ml.png'
-            ],
-            variants: [
-                { size: '500ml', price: 2.25, originalPrice: 2.60, image: '../images/products/lix_hand_washing_sakura_blossom_12_500ml.png' }
-            ],
-            benefits: 'Makes the skin soft and fragrant, removes dirt and bacteria up to 99.9%.',
-            usage: 'Twist the lid upwards. Press the lid to release the hand soap. Scrub with water for 10-20 seconds. Then rinse with clean water.',
-            features: ['Sakura Blossom', 'Antibacterial 99.9%', 'Soft Skin', 'Fragrant']
-        },
-        {
-            id: 'hand-washing-bamboo',
-            title: 'Lix Hand Washing Bamboo Charcoal',
-            category: 'Hand Washing',
-            rating: 4.7,
-            reviews: 76,
-            badge: 'Deep Clean',
-            mainImage: '../images/products/lix_hand_washing_bamboo_charcoal_12_500ml.png',
-            thumbnails: [
+                '../images/products/lix_hand_washing_sakura_blossom_12_500ml.png',
                 '../images/products/lix_hand_washing_bamboo_charcoal_12_500ml.png'
             ],
             variants: [
-                { size: '500ml', price: 2.25, originalPrice: 2.60, image: '../images/products/lix_hand_washing_bamboo_charcoal_12_500ml.png' }
+                {
+                    size: 'Sakura Blossom 500ml',
+                    price: 2.25,
+                    originalPrice: 2.60,
+                    image: '../images/products/lix_hand_washing_sakura_blossom_12_500ml.png',
+                    variant: 'Sakura Blossom'
+                },
+                {
+                    size: 'Bamboo Charcoal 500ml',
+                    price: 2.25,
+                    originalPrice: 2.60,
+                    image: '../images/products/lix_hand_washing_bamboo_charcoal_12_500ml.png',
+                    variant: 'Bamboo Charcoal'
+                }
             ],
             benefits: 'Makes the skin soft and fragrant, removes dirt and bacteria up to 99.9%.',
             usage: 'Twist the lid upwards. Press the lid to release the hand soap. Scrub with water for 10-20 seconds. Then rinse with clean water.',
-            features: ['Bamboo Charcoal', 'Antibacterial 99.9%', 'Deep Clean', 'Soft Skin']
+            features: ['Antibacterial 99.9%', 'Gentle Care', 'Soft Skin', 'Two Variants Available']
         }
     ],
     'bleach': [
@@ -519,15 +523,13 @@ const productTranslations = {
 
         // Detergent Liquid
         'Detergent Liquid': 'ទឹកបោកសម្លៀកបំពាក់',
-        'Detergent Liquid Fresh SAKURA': 'ទឹកបោកសម្លៀកបំពាក់ក្លិនផ្កាសាគូរ៉ា',
-        'Detergent Liquid Purple SAKURA': 'ទឹកបោកសម្លៀកបំពាក់ក្លិនផ្កាសាគូរ៉ាពណ៌ស្វាយ',
+        'Detergent Liquid SAKURA': 'ទឹកបោកសម្លៀកបំពាក់ សាគូរ៉ា',
 
         // Glass Cleaner
         'Glass Cleaner': 'ទឹកជូតកញ្ចក់',
 
         // Hand Washing
-        'Lix Hand Washing Sakura Blossom': 'ទឹកលាងដៃ Lix ផ្កាសាគូរ៉ា',
-        'Lix Hand Washing Bamboo Charcoal': 'ទឹកលាងដៃ Lix ធ្យូងឫស្សី',
+        'Lix Hand Washing': 'ទឹកលាងដៃ Lix',
         'Hand Washing': 'ទឹកលាងដៃ Lix',
 
         // Bleach
