@@ -686,14 +686,15 @@ html:lang(km) .products-main .fab, html[lang="km"] .products-main .fab {
     .sidebar {
         width: 100%;
         position: static;
-        order: 2;
-        margin-top: 1rem;
+        order: 1; /* Put sidebar at top on mobile */
+        margin-bottom: 1rem;
+        margin-top: 0;
         padding: 1rem;
         border-radius: 8px;
     }
 
     .products-main {
-        order: 1;
+        order: 2; /* Put main content below sidebar on mobile */
         width: 100%;
     }
 

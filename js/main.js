@@ -20,6 +20,20 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
+        // Also add touch event for mobile devices
+        mobileMenuToggle.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            const isActive = navMenu.classList.contains('active');
+
+            if (isActive) {
+                closeMobileMenu();
+            } else {
+                openMobileMenu();
+            }
+        });
+
         // Function to open mobile menu
         function openMobileMenu() {
             navMenu.classList.add('active');
