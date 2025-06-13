@@ -99,38 +99,13 @@
     border-color: var(--accent-red);
 }
 
-/* Hero Section Dark Mode */
-[data-theme="dark"] .hero {
+/* Hero Carousel Dark Mode */
+[data-theme="dark"] .hero-carousel {
     background: var(--bg-primary);
 }
 
-[data-theme="dark"] .hero-background {
-    background: url('../images/covers/lix_banner.webp') center center/cover no-repeat !important;
-    filter: brightness(0.6) contrast(1.2) saturate(0.8) !important;
-}
-
-[data-theme="dark"] .hero-overlay {
-    background: linear-gradient(
-        135deg,
-        rgba(17, 24, 39, 0.8) 0%,
-        rgba(31, 41, 55, 0.9) 100%
-    ) !important;
-}
-
-[data-theme="dark"] .hero h1 {
-    color: var(--text-dark);
-}
-
-[data-theme="dark"] .hero p {
-    color: var(--text-light);
-}
-
-[data-theme="dark"] .stat-number {
-    color: var(--accent-red);
-}
-
-[data-theme="dark"] .stat-label {
-    color: var(--text-muted);
+[data-theme="dark"] .carousel-slide img {
+    filter: brightness(0.8) contrast(1.1) saturate(0.9);
 }
 
 /* Products Hero Dark Mode */
