@@ -154,18 +154,18 @@ const productData = {
             rating: 4.8,
             reviews: 124,
             badge: 'Popular',
-            mainImage: '../images/products/lix_detergent_summer_flower.png',
+            mainImage: '../images/products/lix_detergent_summer_flower.webp',
             thumbnails: [
-                '../images/products/lix_detergent_summer_flower.png'
+                '../images/products/lix_detergent_summer_flower.webp'
             ],
             variants: [
-                { size: '150g', price: 0.25, originalPrice: 0.30, image: '../images/products/lix_detergent_summer_flower.png' },
-                { size: '300g', price: 0.45, originalPrice: 0.55, image: '../images/products/lix_detergent_summer_flower.png' },
-                { size: '500g', price: 0.75, originalPrice: 0.90, image: '../images/products/lix_detergent_summer_flower.png' },
-                { size: '1kg', price: 1.375, originalPrice: 1.60, image: '../images/products/lix_detergent_summer_flower.png' },
-                { size: '3kg', price: 3.875, originalPrice: 4.50, image: '../images/products/lix_detergent_summer_flower.png' },
-                { size: '4kg', price: 5.375, originalPrice: 6.00, image: '../images/products/lix_detergent_summer_flower.png' },
-                { size: '5kg', price: 6.5, originalPrice: 7.50, image: '../images/products/lix_detergent_summer_flower.png' }
+                { size: '150g', price: 0.25, originalPrice: 0.30, image: '../images/products/lix_detergent_summer_flower.webp' },
+                { size: '300g', price: 0.45, originalPrice: 0.55, image: '../images/products/lix_detergent_summer_flower.webp' },
+                { size: '500g', price: 0.75, originalPrice: 0.90, image: '../images/products/lix_detergent_summer_flower.webp' },
+                { size: '1kg', price: 1.375, originalPrice: 1.60, image: '../images/products/lix_detergent_summer_flower.webp' },
+                { size: '3kg', price: 3.875, originalPrice: 4.50, image: '../images/products/lix_detergent_summer_flower.webp' },
+                { size: '4kg', price: 5.375, originalPrice: 6.00, image: '../images/products/lix_detergent_summer_flower.webp' },
+                { size: '5kg', price: 6.5, originalPrice: 7.50, image: '../images/products/lix_detergent_summer_flower.webp' }
             ],
             benefits: 'Removes stains and odors on clothes, smells like flowers on the fabric, does not cut hands and can be used both machine and hand wash.',
             usage: 'Separate your white and colored clothes. Put 30 grams of detergent in 3-4 liters of water, stir to foam, and soak the clothes for 30 minutes or less. Wash with water 2-3 times and dry in the sun.',
@@ -178,19 +178,19 @@ const productData = {
             rating: 4.6,
             reviews: 89,
             badge: 'Best Seller',
-            mainImage: '../images/products/lix_detergent_lemon_.png',
+            mainImage: '../images/products/lix_detergent_lemon_.webp',
             thumbnails: [
-                '../images/products/lix_detergent_lemon_.png'
+                '../images/products/lix_detergent_lemon_.webp'
             ],
             variants: [
-                { size: '150g', price: 0.25, originalPrice: 0.30, image: '../images/products/lix_detergent_lemon_.png' },
-                { size: '300g', price: 0.45, originalPrice: 0.55, image: '../images/products/lix_detergent_lemon_.png' },
-                { size: '400g', price: 0.625, originalPrice: 0.75, image: '../images/products/lix_detergent_lemon_.png' },
-                { size: '500g', price: 0.75, originalPrice: 0.90, image: '../images/products/lix_detergent_lemon_.png' },
-                { size: '1kg', price: 1.375, originalPrice: 1.60, image: '../images/products/lix_detergent_lemon_.png' },
-                { size: '3kg', price: 3.875, originalPrice: 4.50, image: '../images/products/lix_detergent_lemon_.png' },
-                { size: '4kg', price: 5.375, originalPrice: 6.00, image: '../images/products/lix_detergent_lemon_.png' },
-                { size: '5kg', price: 6.5, originalPrice: 7.50, image: '../images/products/lix_detergent_lemon_.png' }
+                { size: '150g', price: 0.25, originalPrice: 0.30, image: '../images/products/lix_detergent_lemon_.webp' },
+                { size: '300g', price: 0.45, originalPrice: 0.55, image: '../images/products/lix_detergent_lemon_.webp' },
+                { size: '400g', price: 0.625, originalPrice: 0.75, image: '../images/products/lix_detergent_lemon_.webp' },
+                { size: '500g', price: 0.75, originalPrice: 0.90, image: '../images/products/lix_detergent_lemon_.webp' },
+                { size: '1kg', price: 1.375, originalPrice: 1.60, image: '../images/products/lix_detergent_lemon_.webp' },
+                { size: '3kg', price: 3.875, originalPrice: 4.50, image: '../images/products/lix_detergent_lemon_.webp' },
+                { size: '4kg', price: 5.375, originalPrice: 6.00, image: '../images/products/lix_detergent_lemon_.webp' },
+                { size: '5kg', price: 6.5, originalPrice: 7.50, image: '../images/products/lix_detergent_lemon_.webp' }
             ],
             benefits: 'Helps make fabrics whiter, has a natural lemon scent, does not cut hands, and can be used in both machine and hand wash.',
             usage: 'Separate your white and colored clothes. Put 30 grams of detergent in 3-4 liters of water, stir to foam, and soak the clothes for 30 minutes or less. Wash with water 2-3 times and dry in the sun.',
@@ -203,18 +203,18 @@ const productData = {
             rating: 4.9,
             reviews: 203,
             badge: 'Premium',
-            mainImage: '../images/products/lix_detergent_pises_.png',
+            mainImage: '../images/products/lix_detergent_pises_.webp',
             thumbnails: [
-                '../images/products/lix_detergent_pises_.png'
+                '../images/products/lix_detergent_pises_.webp'
             ],
             variants: [
-                { size: '120g', price: 0.25, originalPrice: 0.30, image: '../images/products/lix_detergent_pises_.png' },
-                { size: '350g', price: 0.625, originalPrice: 0.75, image: '../images/products/lix_detergent_pises_.png' },
-                { size: '800g', price: 1.375, originalPrice: 1.60, image: '../images/products/lix_detergent_pises_.png' },
-                { size: '2.5kg + DW 1.5L', price: 5.00, originalPrice: 5.75, image: '../images/products/lix_detergent_pises_.png' },
-                { size: '2.5kg + DW 1.5L (Special)', price: 4.625, originalPrice: 5.25, image: '../images/products/lix_detergent_pises_.png' },
-                { size: '3.5kg', price: 5.25, originalPrice: 6.00, image: '../images/products/lix_detergent_pises_.png' },
-                { size: '5kg', price: 7.00, originalPrice: 8.00, image: '../images/products/lix_detergent_pises_.png' }
+                { size: '120g', price: 0.25, originalPrice: 0.30, image: '../images/products/lix_detergent_pises_.webp' },
+                { size: '350g', price: 0.625, originalPrice: 0.75, image: '../images/products/lix_detergent_pises_.webp' },
+                { size: '800g', price: 1.375, originalPrice: 1.60, image: '../images/products/lix_detergent_pises_.webp' },
+                { size: '2.5kg + DW 1.5L', price: 5.00, originalPrice: 5.75, image: '../images/products/lix_detergent_pises_.webp' },
+                { size: '2.5kg + DW 1.5L (Special)', price: 4.625, originalPrice: 5.25, image: '../images/products/lix_detergent_pises_.webp' },
+                { size: '3.5kg', price: 5.25, originalPrice: 6.00, image: '../images/products/lix_detergent_pises_.webp' },
+                { size: '5kg', price: 7.00, originalPrice: 8.00, image: '../images/products/lix_detergent_pises_.webp' }
             ],
             benefits: 'Detergent powder easily dissolves in water, has double the quality of stain removal, makes clothes as bright as new, and can be used in both machine and hand washing.',
             usage: 'Separate your white and colored clothes. Put 30 grams of detergent in 3-4 liters of water, stir to foam, and soak the clothes for 30 minutes or less. Wash with water 2-3 times and dry in the sun.',
@@ -227,15 +227,15 @@ const productData = {
             rating: 4.8,
             reviews: 156,
             badge: 'Limited Edition',
-            mainImage: '../images/products/lix_detergent_pises_sakura.png',
+            mainImage: '../images/products/lix_detergent_pises_sakura.webp',
             thumbnails: [
-                '../images/products/lix_detergent_pises_sakura.png'
+                '../images/products/lix_detergent_pises_sakura.webp'
             ],
             variants: [
-                { size: '120g', price: 0.25, originalPrice: 0.30, image: '../images/products/lix_detergent_pises_sakura.png' },
-                { size: '400g', price: 0.75, originalPrice: 0.90, image: '../images/products/lix_detergent_pises_sakura.png' },
-                { size: '800g', price: 0.625, originalPrice: 0.75, image: '../images/products/lix_detergent_pises_sakura.png' },
-                { size: '4kg', price: 5.5, originalPrice: 6.25, image: '../images/products/lix_detergent_pises_sakura.png' }
+                { size: '120g', price: 0.25, originalPrice: 0.30, image: '../images/products/lix_detergent_pises_sakura.webp' },
+                { size: '400g', price: 0.75, originalPrice: 0.90, image: '../images/products/lix_detergent_pises_sakura.webp' },
+                { size: '800g', price: 0.625, originalPrice: 0.75, image: '../images/products/lix_detergent_pises_sakura.webp' },
+                { size: '4kg', price: 5.5, originalPrice: 6.25, image: '../images/products/lix_detergent_pises_sakura.webp' }
             ],
             benefits: 'Detergent powder easily dissolves in water, has double the quality of stain removal, makes clothes as bright as new, and can be used in both machine and hand washing.',
             usage: 'Separate your white and colored clothes. Put 30 grams of detergent in 3-4 liters of water, stir to foam, and soak the clothes for 30 minutes or less. Wash with water 2-3 times and dry in the sun.',
@@ -248,13 +248,13 @@ const productData = {
             rating: 4.7,
             reviews: 98,
             badge: 'New',
-            mainImage: '../images/products/lix_detergent_super_clean_&_fresh_purple.jpg',
+            mainImage: '../images/products/lix_detergent_super_clean_&_fresh_purple.webp',
             thumbnails: [
-                '../images/products/lix_detergent_super_clean_&_fresh_purple.jpg'
+                '../images/products/lix_detergent_super_clean_&_fresh_purple.webp'
             ],
             variants: [
-                { size: '110g', price: 0.25, originalPrice: 0.30, image: '../images/products/lix_detergent_super_clean_&_fresh_purple.jpg' },
-                { size: '3.7kg', price: 5.00, originalPrice: 5.75, image: '../images/products/lix_detergent_super_clean_&_fresh_purple.jpg' }
+                { size: '110g', price: 0.25, originalPrice: 0.30, image: '../images/products/lix_detergent_super_clean_&_fresh_purple.webp' },
+                { size: '3.7kg', price: 5.00, originalPrice: 5.75, image: '../images/products/lix_detergent_super_clean_&_fresh_purple.webp' }
             ],
             benefits: 'Detergent powder easily dissolves in water, has double the quality of stain removal, makes clothes as bright as new, and can be used in both machine and hand washing.',
             usage: 'Separate your white and colored clothes. Put 30 grams of detergent in 3-4 liters of water, stir to foam, and soak the clothes for 30 minutes or less. Wash with water 2-3 times and dry in the sun.',
@@ -269,22 +269,22 @@ const productData = {
             rating: 4.7,
             reviews: 156,
             badge: 'Eco-Friendly',
-            mainImage: '../images/products/lix_dishwashing_15_750ml.png',
+            mainImage: '../images/products/lix_dishwashing_15_750ml.webp',
             thumbnails: [
-                '../images/products/lix_dishwashing_48_200ml.jpg',
-                '../images/products/lix_dishwashing_24_380ml.png',
-                '../images/products/lix_dishwashing_15_750ml.png',
-                '../images/products/lix_dishwashing_8_1500ml.png',
-                '../images/products/lix_dishwashing_pump_1500ml.jpg',
-                '../images/products/lix_dishwashing_4_3800ml.jpg'
+                '../images/products/lix_dishwashing_48_200ml.webp',
+                '../images/products/lix_dishwashing_24_380ml.webp',
+                '../images/products/lix_dishwashing_15_750ml.webp',
+                '../images/products/lix_dishwashing_8_1500ml.webp',
+                '../images/products/lix_dishwashing_pump_1500ml.webp',
+                '../images/products/lix_dishwashing_4_3800ml.webp'
             ],
             variants: [
-                { size: '200ml', price: 0.3, originalPrice: 0.35, image: '../images/products/lix_dishwashing_48_200ml.jpg' },
-                { size: '380ml', price: 0.5, originalPrice: 0.60, image: '../images/products/lix_dishwashing_24_380ml.png' },
-                { size: '750ml', price: 0.875, originalPrice: 1.00, image: '../images/products/lix_dishwashing_15_750ml.png' },
-                { size: '1.5L', price: 1.75, originalPrice: 2.00, image: '../images/products/lix_dishwashing_8_1500ml.png' },
-                { size: '1.5L (Pump)', price: 1.75, originalPrice: 2.00, image: '../images/products/lix_dishwashing_pump_1500ml.jpg' },
-                { size: '3.8L', price: 3.75, originalPrice: 4.25, image: '../images/products/lix_dishwashing_4_3800ml.jpg' }
+                { size: '200ml', price: 0.3, originalPrice: 0.35, image: '../images/products/lix_dishwashing_48_200ml.webp' },
+                { size: '380ml', price: 0.5, originalPrice: 0.60, image: '../images/products/lix_dishwashing_24_380ml.webp' },
+                { size: '750ml', price: 0.875, originalPrice: 1.00, image: '../images/products/lix_dishwashing_15_750ml.webp' },
+                { size: '1.5L', price: 1.75, originalPrice: 2.00, image: '../images/products/lix_dishwashing_8_1500ml.webp' },
+                { size: '1.5L (Pump)', price: 1.75, originalPrice: 2.00, image: '../images/products/lix_dishwashing_pump_1500ml.webp' },
+                { size: '3.8L', price: 3.75, originalPrice: 4.25, image: '../images/products/lix_dishwashing_4_3800ml.webp' }
             ],
             benefits: 'Made from 100% natural lemon, double-strength oil removal, contains vitamin E to protect hand skin, and has a refreshing lemon scent.',
             usage: 'Mix 2 spoons of dishwashing liquid in 4-5 liters of water. Use a damp sponge to create soapy bubbles. Then wash the dishes thoroughly with water. Then wash the dishes with clean water.',
@@ -299,16 +299,16 @@ const productData = {
             rating: 4.5,
             reviews: 78,
             badge: 'Antibacterial',
-            mainImage: '../images/products/lix_floor_cleaner_antibacterial_12_1000ml.png',
+            mainImage: '../images/products/lix_floor_cleaner_antibacterial_12_1000ml.webp',
             thumbnails: [
-                '../images/products/lix_floor_cleaner_antibacterial_12_1000ml.png',
-                '../images/products/lix_floor_cleaner_antibacterial_8_2000ml.png',
-                '../images/products/lix_floor_cleaner_antibacterial_3_5000ml.png'
+                '../images/products/lix_floor_cleaner_antibacterial_12_1000ml.webp',
+                '../images/products/lix_floor_cleaner_antibacterial_8_2000ml.webp',
+                '../images/products/lix_floor_cleaner_antibacterial_3_5000ml.webp'
             ],
             variants: [
-                { size: '1L', price: 1.375, originalPrice: 1.60, image: '../images/products/lix_floor_cleaner_antibacterial_12_1000ml.png' },
-                { size: '2L', price: 2.25, originalPrice: 2.60, image: '../images/products/lix_floor_cleaner_antibacterial_8_2000ml.png' },
-                { size: '5L', price: 5.00, originalPrice: 5.75, image: '../images/products/lix_floor_cleaner_antibacterial_3_5000ml.png' }
+                { size: '1L', price: 1.375, originalPrice: 1.60, image: '../images/products/lix_floor_cleaner_antibacterial_12_1000ml.webp' },
+                { size: '2L', price: 2.25, originalPrice: 2.60, image: '../images/products/lix_floor_cleaner_antibacterial_8_2000ml.webp' },
+                { size: '5L', price: 5.00, originalPrice: 5.75, image: '../images/products/lix_floor_cleaner_antibacterial_3_5000ml.webp' }
             ],
             benefits: 'Cleans stains, dust and grease on the tile quickly and efficiently, makes the tile shiny and pest control up to 99.9%.',
             usage: 'Mix 2 caps of Floor cleaner with 2.5 liters of water for daily cleaning. Mix 2 caps of Floor cleaner with 1 liter of water for cleaning and killing bacteria. Use pure Floor cleaner to clean heavily stained areas.',
@@ -321,16 +321,16 @@ const productData = {
             rating: 4.7,
             reviews: 92,
             badge: 'Aromatherapy',
-            mainImage: '../images/products/lix_floor_cleaner_lixly_&_rose_12_1000ml.png',
+            mainImage: '../images/products/lix_floor_cleaner_lixly_&_rose_12_1000ml.webp',
             thumbnails: [
-                '../images/products/lix_floor_cleaner_lixly_&_rose_12_1000ml.png',
-                '../images/products/lix_floor_cleaner_lixly_&_rose_8_2000ml.png',
-                '../images/products/lix_floor_cleaner_lixly_&_rose_3_5000ml.png'
+                '../images/products/lix_floor_cleaner_lixly_&_rose_12_1000ml.webp',
+                '../images/products/lix_floor_cleaner_lixly_&_rose_8_2000ml.webp',
+                '../images/products/lix_floor_cleaner_lixly_&_rose_3_5000ml.webp'
             ],
             variants: [
-                { size: '1L', price: 1.375, originalPrice: 1.60, image: '../images/products/lix_floor_cleaner_lixly_&_rose_12_1000ml.png' },
-                { size: '2L', price: 2.25, originalPrice: 2.60, image: '../images/products/lix_floor_cleaner_lixly_&_rose_8_2000ml.png' },
-                { size: '5L', price: 5.00, originalPrice: 5.75, image: '../images/products/lix_floor_cleaner_lixly_&_rose_3_5000ml.png' }
+                { size: '1L', price: 1.375, originalPrice: 1.60, image: '../images/products/lix_floor_cleaner_lixly_&_rose_12_1000ml.webp' },
+                { size: '2L', price: 2.25, originalPrice: 2.60, image: '../images/products/lix_floor_cleaner_lixly_&_rose_8_2000ml.webp' },
+                { size: '5L', price: 5.00, originalPrice: 5.75, image: '../images/products/lix_floor_cleaner_lixly_&_rose_3_5000ml.webp' }
             ],
             benefits: 'Cleans stains, dust and grease on the tile quickly and efficiently, makes the tile shiny and pest control up to 99.9%.',
             usage: 'Mix 2 caps of Floor cleaner with 2.5 liters of water for daily cleaning. Mix 2 caps of Floor cleaner with 1 liter of water for cleaning and killing bacteria. Use pure Floor cleaner to clean heavily stained areas.',
@@ -345,24 +345,24 @@ const productData = {
             rating: 4.6,
             reviews: 145,
             badge: 'Concentrated',
-            mainImage: '../images/products/lix_detergent_lixquid_4_4000ml.png',
+            mainImage: '../images/products/lix_detergent_lixquid_4_4000ml.webp',
             thumbnails: [
-                '../images/products/lix_detergent_lixquid_4_4000ml.png',
-                '../images/products/lix_detergent_lixquid_perfume_4_4000ml.png'
+                '../images/products/lix_detergent_lixquid_4_4000ml.webp',
+                '../images/products/lix_detergent_lixquid_perfume_4_4000ml.webp'
             ],
             variants: [
                 {
                     size: '4L Regular',
                     price: 5.875,
                     originalPrice: 6.75,
-                    image: '../images/products/lix_detergent_lixquid_4_4000ml.png',
+                    image: '../images/products/lix_detergent_lixquid_4_4000ml.webp',
                     variant: 'Regular'
                 },
                 {
                     size: '4L Perfume',
                     price: 5.875,
                     originalPrice: 6.75,
-                    image: '../images/products/lix_detergent_lixquid_perfume_4_4000ml.png',
+                    image: '../images/products/lix_detergent_lixquid_perfume_4_4000ml.webp',
                     variant: 'Perfume'
                 }
             ],
@@ -377,24 +377,24 @@ const productData = {
             rating: 4.8,
             reviews: 140,
             badge: 'Limited Edition',
-            mainImage: '../images/products/lix_detergent_lixquid_fresh_sakura_4_3000ml.jpg',
+            mainImage: '../images/products/lix_detergent_lixquid_fresh_sakura_4_3000ml.webp',
             thumbnails: [
-                '../images/products/lix_detergent_lixquid_fresh_sakura_4_3000ml.jpg',
-                '../images/products/lix_detergent_lixquid_purple_sakura_4_3000ml.jpg'
+                '../images/products/lix_detergent_lixquid_fresh_sakura_4_3000ml.webp',
+                '../images/products/lix_detergent_lixquid_purple_sakura_4_3000ml.webp'
             ],
             variants: [
                 {
                     size: '3L Fresh SAKURA',
                     price: 5.75,
                     originalPrice: 6.50,
-                    image: '../images/products/lix_detergent_lixquid_fresh_sakura_4_3000ml.jpg',
+                    image: '../images/products/lix_detergent_lixquid_fresh_sakura_4_3000ml.webp',
                     variant: 'Fresh SAKURA'
                 },
                 {
                     size: '3L Purple SAKURA',
                     price: 5.75,
                     originalPrice: 6.50,
-                    image: '../images/products/lix_detergent_lixquid_purple_sakura_4_3000ml.jpg',
+                    image: '../images/products/lix_detergent_lixquid_purple_sakura_4_3000ml.webp',
                     variant: 'Purple SAKURA'
                 }
             ],
@@ -411,14 +411,14 @@ const productData = {
             rating: 4.4,
             reviews: 56,
             badge: 'Streak-Free',
-            mainImage: '../images/products/lix_glass_cleaner_12_650ml.png',
+            mainImage: '../images/products/lix_glass_cleaner_12_650ml.webp',
             thumbnails: [
-                '../images/products/lix_glass_cleaner_12_650ml.png',
-                '../images/products/lix_glass_cleaner_5l.png'
+                '../images/products/lix_glass_cleaner_12_650ml.webp',
+                '../images/products/lix_glass_cleaner_5l.webp'
             ],
             variants: [
-                { size: '650ml', price: 1.25, originalPrice: 1.50, image: '../images/products/lix_glass_cleaner_12_650ml.png' },
-                { size: '5L', price: 5.00, originalPrice: 5.75, image: '../images/products/lix_glass_cleaner_5l.png' }
+                { size: '650ml', price: 1.25, originalPrice: 1.50, image: '../images/products/lix_glass_cleaner_12_650ml.webp' },
+                { size: '5L', price: 5.00, originalPrice: 5.75, image: '../images/products/lix_glass_cleaner_5l.webp' }
             ],
             benefits: 'Highly effective in cleaning glass, keeps glass quality as good as new, removes stains and dust well, and has a pleasant scent.',
             usage: 'Rotate the spray head at the end of the machine from "large spray" to "small spray". Spray directly onto the dirty and stained surface, leave for 2 minutes, then use a cloth to wipe away all stains. Rotate the spray head to the "off" position after use.',
@@ -433,24 +433,24 @@ const productData = {
             rating: 4.6,
             reviews: 89,
             badge: 'Gentle Care',
-            mainImage: '../images/products/lix_hand_washing_sakura_blossom_12_500ml.png',
+            mainImage: '../images/products/lix_hand_washing_sakura_blossom_12_500ml.webp',
             thumbnails: [
-                '../images/products/lix_hand_washing_sakura_blossom_12_500ml.png',
-                '../images/products/lix_hand_washing_bamboo_charcoal_12_500ml.png'
+                '../images/products/lix_hand_washing_sakura_blossom_12_500ml.webp',
+                '../images/products/lix_hand_washing_bamboo_charcoal_12_500ml.webp'
             ],
             variants: [
                 {
                     size: 'Sakura Blossom 500ml',
                     price: 2.25,
                     originalPrice: 2.60,
-                    image: '../images/products/lix_hand_washing_sakura_blossom_12_500ml.png',
+                    image: '../images/products/lix_hand_washing_sakura_blossom_12_500ml.webp',
                     variant: 'Sakura Blossom'
                 },
                 {
                     size: 'Bamboo Charcoal 500ml',
                     price: 2.25,
                     originalPrice: 2.60,
-                    image: '../images/products/lix_hand_washing_bamboo_charcoal_12_500ml.png',
+                    image: '../images/products/lix_hand_washing_bamboo_charcoal_12_500ml.webp',
                     variant: 'Bamboo Charcoal'
                 }
             ],
@@ -467,12 +467,12 @@ const productData = {
             rating: 4.3,
             reviews: 34,
             badge: 'Powerful',
-            mainImage: '../images/products/lix_o_javel_24_300ml.png',
+            mainImage: '../images/products/lix_o_javel_24_300ml.webp',
             thumbnails: [
-                '../images/products/lix_o_javel_24_300ml.png'
+                '../images/products/lix_o_javel_24_300ml.webp'
             ],
             variants: [
-                { size: '300ml', price: 0.375, originalPrice: 0.45, image: '../images/products/lix_o_javel_24_300ml.png' }
+                { size: '300ml', price: 0.375, originalPrice: 0.45, image: '../images/products/lix_o_javel_24_300ml.webp' }
             ],
             benefits: 'Highly effective in removing stains, removing bad odors and other bacteria, and does not harm the skin of the hand.',
             usage: 'For use on white clothes and fabrics. Pour 30 ml of Ojavel into 10 liters of water and add soap as usual. Add clothes, soak for 5 minutes, then wash as usual.',
@@ -487,12 +487,12 @@ const productData = {
             rating: 4.5,
             reviews: 67,
             badge: 'Deep Clean',
-            mainImage: '../images/products/lix_toilet_cleaner_900ml.png',
+            mainImage: '../images/products/lix_toilet_cleaner_900ml.webp',
             thumbnails: [
-                '../images/products/lix_toilet_cleaner_900ml.png'
+                '../images/products/lix_toilet_cleaner_900ml.webp'
             ],
             variants: [
-                { size: '900ml', price: 1.375, originalPrice: 1.60, image: '../images/products/lix_toilet_cleaner_900ml.png' }
+                { size: '900ml', price: 1.375, originalPrice: 1.60, image: '../images/products/lix_toilet_cleaner_900ml.webp' }
             ],
             benefits: 'Keeps your toilet clean, odor-free, can remove up to 99.99% of dirt stuck in the toilet, and effectively removes bad odors and other bacteria.',
             usage: 'For toilet bowls: Spray LIX Toilet Cleaner directly into and around the rim of the toilet bowl, wait a moment, then use a toilet brush to scrub and clean, then rinse thoroughly with water. For bathroom tiles and walls: Spray LIX Toilet Cleaner directly onto bathroom tiles and walls, scrub to remove stains, then rinse thoroughly with water.',
