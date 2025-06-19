@@ -253,11 +253,11 @@ const translations = {
             },
             contact: {
                 title: "Contact Info",
-                phone: "(855) 89 982 999",
-                email: "info@bdc.com",
-                address: "S.I Building, #93, Preah Sihanouk Blvd, Phnom Penh"
+                phone: "081 590 777 / 081 789 777",
+                email: "sales.coor@bdccam.com",
+                address: "S.I Building, #93, Preah Sihanouk Blvd, Phum 7, Sangkat Chaktomok, Khan Daun Penh, Phnom Penh, Cambodia."
             },
-            copyright: "© 2024 BDC best quality in cambodia. All rights reserved. Professional cleaning solutions for every need."
+            copyright: "© 2025 BDC best quality in cambodia. All rights reserved. Professional cleaning solutions for every need."
         }
     },
     
@@ -514,11 +514,11 @@ const translations = {
             },
             contact: {
                 title: "ព័ត៌មានទំនាក់ទំនង",
-                phone: "(855) 89 982 999",
-                email: "info@bdc.com",
-                address: "S.I Building, #93, Preah Sihanouk Blvd, Phnom Penh"
+                phone: "081 590 777 / 081 789 777",
+                email: "sales.coor@bdccam.com",
+                address: "អគារ អេស.អាយ, លេខ ៩៣, មហាវិថីព្រះសីហនុ, ភូមិ៧, សង្កាត់ចតុមុខ, ខណ្ឌដូនពេញ, រាជធានីភ្នំពេញ"
             },
-            copyright: "© 2024 BDC គុណភាពល្អបំផុតនៅកម្ពុជា។ រក្សាសិទ្ធិទាំងអស់។ ដំណោះស្រាយសម្អាតវិជ្ជាជីវៈសម្រាប់គ្រប់ការត្រូវការ។"
+            copyright: "© 2025 BDC គុណភាពល្អបំផុតនៅកម្ពុជា។ រក្សាសិទ្ធិទាំងអស់។ ដំណោះស្រាយសម្អាតវិជ្ជាជីវៈសម្រាប់គ្រប់ការត្រូវការ។"
         }
     }
 };
