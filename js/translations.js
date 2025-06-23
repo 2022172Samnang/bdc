@@ -696,23 +696,23 @@ class LanguageManager {
         // Refresh all FontAwesome icons to ensure proper display
         const allIcons = document.querySelectorAll('.fas, .fab, .far, .fal, .fad, .fat, i[class*="fa-"]');
         allIcons.forEach(icon => {
-            // Ensure proper font family without disrupting the display
-            if (icon.classList.contains('fab')) {
-                icon.style.fontFamily = '"Font Awesome 6 Brands"';
-                icon.style.fontWeight = '400';
-            } else {
-                icon.style.fontFamily = '"Font Awesome 6 Free"';
-                icon.style.fontWeight = '900';
+            // Clear any inline styles that might conflict
+            icon.style.removeProperty('font-family');
+            icon.style.removeProperty('font-weight');
+            icon.style.removeProperty('font-style');
+            
+            // Force a reflow to ensure CSS rules are applied
+            icon.offsetHeight;
+            
+            // For brand icons, ensure they use the correct font
+            if (icon.classList.contains('fab') || 
+                icon.classList.contains('fa-facebook') || 
+                icon.classList.contains('fa-tiktok') || 
+                icon.classList.contains('fa-telegram') ||
+                icon.classList.contains('fa-instagram')) {
+                // Let CSS handle the styling
+                icon.classList.add('fab');
             }
-            icon.style.fontStyle = 'normal';
-            icon.style.fontVariant = 'normal';
-            icon.style.textTransform = 'none';
-            icon.style.lineHeight = '1';
-            icon.style.webkitFontSmoothing = 'antialiased';
-            icon.style.mozOsxFontSmoothing = 'grayscale';
-            icon.style.display = 'inline-block';
-            icon.style.opacity = '1';
-            icon.style.visibility = 'visible';
         });
 
         // Special handling for category icons

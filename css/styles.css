@@ -199,6 +199,31 @@ html:lang(km) .fab, html[lang="km"] .fab {
   font-weight: 400 !important;
 }
 
+/* Social media icons specific fix for footer */
+html:lang(km) .social-links a i,
+html[lang="km"] .social-links a i,
+.social-links a .fab {
+  font-family: "Font Awesome 6 Brands" !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1 !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  display: inline-block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Ensure social links maintain their styling in Khmer mode */
+html:lang(km) .social-links a,
+html[lang="km"] .social-links a {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
 /* Buttons */
 .btn {
   display: inline-flex;
