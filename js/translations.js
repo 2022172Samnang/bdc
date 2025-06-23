@@ -261,7 +261,7 @@ const translations = {
         }
     },
     
-    km: {
+    kh: {
         // Brand
         brand: "BDC",
         
@@ -548,7 +548,15 @@ if (typeof getCookie === 'undefined') {
 // Language Management
 class LanguageManager {
     constructor() {
-        this.currentLanguage = getCookie('language') || localStorage.getItem('language') || 'en';
+        // Handle migration from old 'km' to new 'kh' language code
+        let savedLanguage = getCookie('language') || localStorage.getItem('language') || 'en';
+        if (savedLanguage === 'km') {
+            savedLanguage = 'kh';
+            // Update stored values
+            setCookie('language', 'kh');
+            localStorage.setItem('language', 'kh');
+        }
+        this.currentLanguage = savedLanguage;
         this.isInitialized = false;
         this.init();
     }
@@ -573,7 +581,7 @@ class LanguageManager {
             console.log('Language Manager initialized with language:', this.currentLanguage);
 
             // Force update the document language attribute
-            document.documentElement.lang = this.currentLanguage === 'km' ? 'km' : 'en';
+            document.documentElement.lang = this.currentLanguage === 'kh' ? 'kh' : 'en';
 
             // Refresh all icons to ensure proper display on initialization
             setTimeout(() => {
@@ -635,7 +643,7 @@ class LanguageManager {
         this.updateLanguageIcon();
 
         // Update document language attribute
-        document.documentElement.lang = language === 'km' ? 'km' : 'en';
+        document.documentElement.lang = language === 'kh' ? 'kh' : 'en';
 
         // Refresh all icons to ensure proper display after language change
         setTimeout(() => {
@@ -656,7 +664,7 @@ class LanguageManager {
     updateLanguageButton() {
         const langButton = document.getElementById('current-lang');
         if (langButton) {
-            const newText = this.currentLanguage === 'km' ? 'KM' : 'EN';
+            const newText = this.currentLanguage === 'kh' ? 'KH' : 'EN';
             langButton.textContent = newText;
 
             // Add visual feedback only if language is actually changing
@@ -730,7 +738,7 @@ class LanguageManager {
         // Create a subtle notification
         const notification = document.createElement('div');
         notification.className = 'language-notification';
-        notification.textContent = `Language changed to ${language === 'km' ? 'Khmer' : 'English'}`;
+        notification.textContent = `Language changed to ${language === 'kh' ? 'Khmer' : 'English'}`;
         notification.style.cssText = `
             position: fixed;
             top: 80px;
@@ -767,7 +775,7 @@ class LanguageManager {
     }
 
     toggle() {
-        const newLanguage = this.currentLanguage === 'en' ? 'km' : 'en';
+        const newLanguage = this.currentLanguage === 'en' ? 'kh' : 'en';
         console.log('Toggling language from', this.currentLanguage, 'to', newLanguage);
         this.setLanguage(newLanguage);
     }

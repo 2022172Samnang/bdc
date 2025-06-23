@@ -112,28 +112,28 @@ p {
 }
 
 /* Khmer Font Support */
-:lang(km),
-[lang="km"],
+:lang(kh),
+[lang="kh"],
 .khmer-text {
   font-family: 'Battambang', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 /* Enhanced typography for Khmer text */
-:lang(km) h1, :lang(km) h2, :lang(km) h3, :lang(km) h4, :lang(km) h5, :lang(km) h6,
-[lang="km"] h1, [lang="km"] h2, [lang="km"] h3, [lang="km"] h4, [lang="km"] h5, [lang="km"] h6,
+:lang(kh) h1, :lang(kh) h2, :lang(kh) h3, :lang(kh) h4, :lang(kh) h5, :lang(kh) h6,
+[lang="kh"] h1, [lang="kh"] h2, [lang="kh"] h3, [lang="kh"] h4, [lang="kh"] h5, [lang="kh"] h6,
 .khmer-text h1, .khmer-text h2, .khmer-text h3, .khmer-text h4, .khmer-text h5, .khmer-text h6 {
   font-family: 'Battambang', 'Poppins', sans-serif;
   line-height: 1.4;
 }
 
-:lang(km) p, [lang="km"] p, .khmer-text p {
+:lang(kh) p, [lang="kh"] p, .khmer-text p {
   font-family: 'Battambang', 'Poppins', sans-serif;
   line-height: 1.7;
 }
 
 /* Ensure FontAwesome icons maintain their font family in Khmer mode */
-:lang(km) .fas, :lang(km) .fab, :lang(km) .far, :lang(km) .fal, :lang(km) .fad, :lang(km) .fat,
-[lang="km"] .fas, [lang="km"] .fab, [lang="km"] .far, [lang="km"] .fal, [lang="km"] .fad, [lang="km"] .fat,
+:lang(kh) .fas, :lang(kh) .fab, :lang(kh) .far, :lang(kh) .fal, :lang(kh) .fad, :lang(kh) .fat,
+[lang="kh"] .fas, [lang="kh"] .fab, [lang="kh"] .far, [lang="kh"] .fal, [lang="kh"] .fad, [lang="kh"] .fat,
 .khmer-text .fas, .khmer-text .fab, .khmer-text .far, .khmer-text .fal, .khmer-text .fad, .khmer-text .fat {
   font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 6 Pro" !important;
   font-weight: 900 !important;
@@ -149,23 +149,23 @@ p {
 }
 
 /* Specific fixes for brand icons */
-:lang(km) .fab, [lang="km"] .fab, .khmer-text .fab {
+:lang(kh) .fab, [lang="kh"] .fab, .khmer-text .fab {
   font-family: "Font Awesome 6 Brands" !important;
   font-weight: 400 !important;
 }
 
 /* Specific fixes for regular icons */
-:lang(km) .far, [lang="km"] .far, .khmer-text .far {
+:lang(kh) .far, [lang="kh"] .far, .khmer-text .far {
   font-family: "Font Awesome 6 Free" !important;
   font-weight: 400 !important;
 }
 
 /* Additional icon fixes for specific elements */
-:lang(km) .header-controls i, [lang="km"] .header-controls i,
-:lang(km) .category-icon i, [lang="km"] .category-icon i,
-:lang(km) .feature-icon i, [lang="km"] .feature-icon i,
-:lang(km) .footer i, [lang="km"] .footer i,
-:lang(km) .contact-info i, [lang="km"] .contact-info i {
+:lang(kh) .header-controls i, [lang="kh"] .header-controls i,
+:lang(kh) .category-icon i, [lang="kh"] .category-icon i,
+:lang(kh) .feature-icon i, [lang="kh"] .feature-icon i,
+:lang(kh) .footer i, [lang="kh"] .footer i,
+:lang(kh) .contact-info i, [lang="kh"] .contact-info i {
   font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
   font-weight: 900 !important;
   font-style: normal !important;
@@ -175,10 +175,10 @@ p {
 }
 
 /* Force FontAwesome to work properly in Khmer mode - highest specificity */
-html:lang(km) i[class*="fa-"], html[lang="km"] i[class*="fa-"],
-html:lang(km) .fas, html[lang="km"] .fas,
-html:lang(km) .fab, html[lang="km"] .fab,
-html:lang(km) .far, html[lang="km"] .far {
+html:lang(kh) i[class*="fa-"], html[lang="kh"] i[class*="fa-"],
+html:lang(kh) .fas, html[lang="kh"] .fas,
+html:lang(kh) .fab, html[lang="kh"] .fab,
+html:lang(kh) .far, html[lang="kh"] .far {
   font-family: "Font Awesome 6 Free" !important;
   font-weight: 900 !important;
   font-style: normal !important;
@@ -194,14 +194,14 @@ html:lang(km) .far, html[lang="km"] .far {
 }
 
 /* Brand icons specific fix */
-html:lang(km) .fab, html[lang="km"] .fab {
+html:lang(kh) .fab, html[lang="kh"] .fab {
   font-family: "Font Awesome 6 Brands" !important;
   font-weight: 400 !important;
 }
 
 /* Social media icons specific fix for footer */
-html:lang(km) .social-links a i,
-html[lang="km"] .social-links a i,
+html:lang(kh) .social-links a i,
+html[lang="kh"] .social-links a i,
 .social-links a .fab {
   font-family: "Font Awesome 6 Brands" !important;
   font-weight: 400 !important;
@@ -217,8 +217,8 @@ html[lang="km"] .social-links a i,
 }
 
 /* Ensure social links maintain their styling in Khmer mode */
-html:lang(km) .social-links a,
-html[lang="km"] .social-links a {
+html:lang(kh) .social-links a,
+html[lang="kh"] .social-links a {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;

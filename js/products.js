@@ -504,7 +504,7 @@ const productData = {
 // Simple translation mapping for products
 // CORRECTED: The keys now exactly match the text in productData
 const productTranslations = {
-    km: {
+    kh: {
         // Categories & Titles
         'Detergent Powder (Summer Flower)': 'សាប៊ូម្សៅ (ផ្កា)',
         'Detergent Powder (Lemon)': 'សាប៊ូម្សៅ (ក្រូច)',
@@ -566,9 +566,9 @@ function translateProductContent() {
 
     console.log('Current language:', manager.currentLanguage);
 
-    if (manager.currentLanguage === 'km') {
+    if (manager.currentLanguage === 'kh') {
         console.log('Translating to Khmer...');
-        const translations = productTranslations.km;
+        const translations = productTranslations.kh;
 
         // Translate product titles
         const titleElements = document.querySelectorAll('.product-title');

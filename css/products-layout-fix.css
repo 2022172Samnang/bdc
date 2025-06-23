@@ -82,9 +82,9 @@
 }
 
 /* Ensure category icons display properly in Khmer mode */
-:lang(km) .category-item i, [lang="km"] .category-item i,
-:lang(km) .sidebar .fas, [lang="km"] .sidebar .fas,
-:lang(km) .sidebar .fab, [lang="km"] .sidebar .fab {
+:lang(kh) .category-item i, [lang="kh"] .category-item i,
+:lang(kh) .sidebar .fas, [lang="kh"] .sidebar .fas,
+:lang(kh) .sidebar .fab, [lang="kh"] .sidebar .fab {
     font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
     font-weight: 900 !important;
     font-style: normal !important;
@@ -96,10 +96,10 @@
 }
 
 /* High specificity fix for all FontAwesome icons in products page */
-html:lang(km) .sidebar i[class*="fa-"], html[lang="km"] .sidebar i[class*="fa-"],
-html:lang(km) .products-main i[class*="fa-"], html[lang="km"] .products-main i[class*="fa-"],
-html:lang(km) .category-item .fas, html[lang="km"] .category-item .fas,
-html:lang(km) .category-item .fab, html[lang="km"] .category-item .fab {
+html:lang(kh) .sidebar i[class*="fa-"], html[lang="kh"] .sidebar i[class*="fa-"],
+html:lang(kh) .products-main i[class*="fa-"], html[lang="kh"] .products-main i[class*="fa-"],
+html:lang(kh) .category-item .fas, html[lang="kh"] .category-item .fas,
+html:lang(kh) .category-item .fab, html[lang="kh"] .category-item .fab {
     font-family: "Font Awesome 6 Free" !important;
     font-weight: 900 !important;
     font-style: normal !important;
@@ -117,8 +117,8 @@ html:lang(km) .category-item .fab, html[lang="km"] .category-item .fab {
 }
 
 /* Brand icons in products page */
-html:lang(km) .sidebar .fab, html[lang="km"] .sidebar .fab,
-html:lang(km) .products-main .fab, html[lang="km"] .products-main .fab {
+html:lang(kh) .sidebar .fab, html[lang="kh"] .sidebar .fab,
+html:lang(kh) .products-main .fab, html[lang="kh"] .products-main .fab {
     font-family: "Font Awesome 6 Brands" !important;
     font-weight: 400 !important;
 }
