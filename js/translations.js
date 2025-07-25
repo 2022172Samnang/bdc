@@ -93,6 +93,9 @@ const translations = {
             caution_text: "Avoid contact with eyes; keep out of reach of children.",
             storage: "Storage:",
             storage_text: "Close lid after use; store in a cool, dry place.",
+            view: {
+                list: "List View"
+            },
             
             // Specific Products
             detergent_powder: {
@@ -212,6 +215,15 @@ const translations = {
                 sustainability_desc: "Committed to protecting our planet for future generations.",
                 trust: "Trust",
                 trust_desc: "Building lasting relationships through reliability and transparency."
+            },
+            stats: {
+                title: "BDC by the Numbers",
+                subtitle: "Our achievements and impact worldwide",
+                years_excellence: "Years of Excellence",
+                satisfied_customers: "Satisfied Customers",
+                premium_products: "Premium Products",
+                effectiveness_rate: "Effectiveness Rate",
+                eco_friendly: "Eco-Friendly"
             }
         },
         
@@ -223,11 +235,27 @@ const translations = {
             },
             form: {
                 title: "Send us a Message",
+                description: "We'd love to hear from you. Send us a message and we'll respond as soon as possible.",
                 name: "Full Name",
                 email: "Email Address",
                 subject: "Subject",
                 message: "Message",
-                send: "Send Message"
+                send: "Send Message",
+                placeholders: {
+                    name: "Enter your full name",
+                    email: "Enter your email address",
+                    phone: "Enter your phone number (optional)",
+                    message: "Tell us how we can help you..."
+                },
+                subject_options: {
+                    default: "Select a subject",
+                    general: "General Inquiry",
+                    product: "Product Information",
+                    support: "Customer Support",
+                    partnership: "Partnership Opportunity",
+                    feedback: "Feedback",
+                    other: "Other"
+                }
             },
             info: {
                 title: "Contact Information",
@@ -236,6 +264,17 @@ const translations = {
                 email: "Email Address",
                 fax: "Fax Number",
                 hours: "Business Hours"
+            },
+            office: {
+                main: "Main Office:",
+                alternative: "Alternative:",
+                head_office: "Phnom Penh Head Office",
+                company_name: "BDC - Best Quality in Cambodia"
+            },
+            map: {
+                title: "Find Us",
+                subtitle: "Visit our headquarters in Phnom Penh",
+                open_maps: "Open in Google Maps"
             }
         },
         
@@ -354,6 +393,9 @@ const translations = {
             caution_text: "កុំឱ្យប៉ះពាល់នឹងភ្នែក; រក្សាឱ្យឆ្ងាយពីកុមារ។",
             storage: "ការរក្សាទុក៖",
             storage_text: "បិទគម្របបន្ទាប់ពីប្រើប្រាស់; រក្សាទុកនៅកន្លែងត្រជាក់ និងស្ងួត។",
+            view: {
+                list: "ទិដ្ឋភាពបញ្ជី"
+            },
             
             // Specific Products
             detergent_powder: {
@@ -473,6 +515,15 @@ const translations = {
                 sustainability_desc: "ប្តេជ្ញាចិត្តក្នុងការការពារភពផែនដីរបស់យើងសម្រាប់មនុស្សជំនាន់ក្រោយ។",
                 trust: "ទំនុកចិត្ត",
                 trust_desc: "បង្កើតទំនាក់ទំនងយូរអង្វែងតាមរយៈភាពអាចទុកចិត្តបាន និងតម្លាភាព។"
+            },
+            stats: {
+                title: "BDC តាមលេខ",
+                subtitle: "សមិទ្ធិផល និងឥទ្ធិពលរបស់យើងនៅទូទាំងពិភពលោក",
+                years_excellence: "ឆ្នាំនៃឧត្តមភាព",
+                satisfied_customers: "អតិថិជនពេញចិត្ត",
+                premium_products: "ផលិតផលកម្រិតខ្ពស់",
+                effectiveness_rate: "អត្រាប្រសិទ្ធភាព",
+                eco_friendly: "ស្រស់បរិស្ថាន"
             }
         },
         
@@ -484,11 +535,27 @@ const translations = {
             },
             form: {
                 title: "ផ្ញើសារមកកាន់យើង",
+                description: "យើងចង់ស្តាប់ពីអ្នក។ ផ្ញើសារមកកាន់យើង ហើយយើងនឹងឆ្លើយតបឱ្យបានលឿនបំផុត។",
                 name: "ឈ្មោះពេញ",
                 email: "អាសយដ្ឋានអ៊ីមែល",
                 subject: "ប្រធានបទ",
                 message: "សារ",
-                send: "ផ្ញើសារ"
+                send: "ផ្ញើសារ",
+                placeholders: {
+                    name: "បញ្ចូលឈ្មោះពេញរបស់អ្នក",
+                    email: "បញ្ចូលអាសយដ្ឋានអ៊ីមែលរបស់អ្នក",
+                    phone: "បញ្ចូលលេខទូរស័ព្ទរបស់អ្នក (ស្រេចចិត្ត)",
+                    message: "ប្រាប់យើងពីរបៀបដែលយើងអាចជួយអ្នក..."
+                },
+                subject_options: {
+                    default: "ជ្រើសរើសប្រធានបទ",
+                    general: "សំណួរទូទៅ",
+                    product: "ព័ត៌មានផលិតផល",
+                    support: "ការគាំទ្រអតិថិជន",
+                    partnership: "ឱកាសភាពជាដេគូ",
+                    feedback: "មតិកែលម្អ",
+                    other: "ផ្សេងៗ"
+                }
             },
             info: {
                 title: "ព័ត៌មានទំនាក់ទំនង",
@@ -497,6 +564,17 @@ const translations = {
                 email: "អាសយដ្ឋានអ៊ីមែល",
                 fax: "លេខទូរសារ",
                 hours: "ម៉ោងធ្វើការ"
+            },
+            office: {
+                main: "ការិយាល័យសំខាន់៖",
+                alternative: "ជំនួស៖",
+                head_office: "ការិយាល័យកណ្តាលភ្នំពេញ",
+                company_name: "BDC - គុណភាពល្អបំផុតនៅកម្ពុជា"
+            },
+            map: {
+                title: "ស្វែងរកយើង",
+                subtitle: "មកលេងការិយាល័យកណ្តាលរបស់យើងនៅភ្នំពេញ",
+                open_maps: "បើកក្នុង Google Maps"
             }
         },
         
