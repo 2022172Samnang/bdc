@@ -350,7 +350,7 @@ const productData = {
                 }
             ],
             benefits: 'Highly effective in penetrating deep into the fabric to clean stains stuck to the fabric and keep the fabric quality as new. Can be used for both hand and machine washing.',
-            usage: 'Hand use: Separate the colors of the clothes, add 2 bottles of detergent liquid to 4-5 liters of water, soak for 30 minutes or less then this and get double the effect, then wash and rinse with clean water 2-3 times and dry in a sunny place. Machine use: Separate the colors of the clothes, add 2 caps of detergent liquid for 5-6 kg of clothes, add 1 cap for slightly stained clothes, and follow the instructions of the machine.',
+            usage: '<strong>Hand use:</strong> Separate the colors of the clothes, add 2 bottles of detergent liquid to 4-5 liters of water, soak for 30 minutes or less then this and get double the effect, then wash and rinse with clean water 2-3 times and dry in a sunny place.<br><br><strong>Machine use:</strong> Separate the colors of the clothes, add 2 caps of detergent liquid for 5-6 kg of clothes, add 1 cap for slightly stained clothes, and follow the instructions of the machine.',
             features: ['Concentrated Formula', 'Tough Stain Removal', 'Machine Compatible', 'Gentle on Fabrics']
         },
         {
@@ -378,7 +378,7 @@ const productData = {
                 }
             ],
             benefits: 'Double stains clean, make clothes smell of Sakura flowers, fragrant, lasting 24 hours, has a prize for every bottle, is of good quality, and is recognized as an International Organization for Standardization (ISO).',
-            usage: 'Hand use: Separate the colors of the clothes, add 2 bottles of detergent liquid to 4-5 liters of water, soak for 30 minutes or less then this and get double the effect, then wash and rinse with clean water 2-3 times and dry in a sunny place. Machine use: Separate the colors of the clothes, add 2 caps of detergent liquid for 5-6 kg of clothes, add 1 cap for slightly stained clothes, and follow the instructions of the machine.',
+            usage: '<strong>Hand use:</strong> Separate the colors of the clothes, add 2 bottles of detergent liquid to 4-5 liters of water, soak for 30 minutes or less then this and get double the effect, then wash and rinse with clean water 2-3 times and dry in a sunny place.<br><br><strong>Machine use:</strong> Separate the colors of the clothes, add 2 caps of detergent liquid for 5-6 kg of clothes, add 1 cap for slightly stained clothes, and follow the instructions of the machine.',
             features: ['Sakura Fragrance', 'Double Clean', 'ISO Certified', 'Limited Edition']
         }
     ],
@@ -470,7 +470,7 @@ const productData = {
                 { size: '900ml', image: '../images/products/lix_toilet_cleaner_900ml.webp' }
             ],
             benefits: 'Keeps your toilet clean, odor-free, can remove up to 99.99% of dirt stuck in the toilet, and effectively removes bad odors and other bacteria.',
-            usage: 'For toilet bowls: Spray LIX Toilet Cleaner directly into and around the rim of the toilet bowl, wait a moment, then use a toilet brush to scrub and clean, then rinse thoroughly with water. For bathroom tiles and walls: Spray LIX Toilet Cleaner directly onto bathroom tiles and walls, scrub to remove stains, then rinse thoroughly with water.',
+            usage: '<strong>For toilet bowls:</strong> Spray LIX Toilet Cleaner directly into and around the rim of the toilet bowl, wait a moment, then use a toilet brush to scrub and clean, then rinse thoroughly with water.<br><br><strong>For bathroom tiles and walls:</strong> Spray LIX Toilet Cleaner directly onto bathroom tiles and walls, scrub to remove stains, then rinse thoroughly with water.',
             features: ['99.99% Dirt Removal', 'Odor Free', 'Antibacterial', 'Deep Clean']
         }
     ]
@@ -519,11 +519,11 @@ const productTranslations = {
         'Separate your white and colored clothes. Put 30 grams of detergent in 3-4 liters of water, stir to foam, and soak the clothes for 30 minutes or less. Wash with water 2-3 times and dry in the sun.': 'បែងចែកសម្លៀកបំពាក់ពណ៌ស និង ពណ៌ផ្សេងដោយឡែកពីគ្នា។ ដាក់ម្សៅសាប៊ូ 30ក្រាម ក្នុងទឹក 3-4 លីត្រកូរឱ្យពពុះ ដាក់ត្រាំសម្លៀកបំពាក់ 30 នាទីឬតិចជាងនេះ។ លាងទឹក 2-3ដង និងដាក់ហាលក្រោយពន្លឺព្រះអាទិត្យ។',
         'Mix 2 spoons of dishwashing liquid in 4-5 liters of water. Use a damp sponge to create soapy bubbles. Then wash the dishes thoroughly with water. Then wash the dishes with clean water.': 'លាយទឹកលាងចាន LIX ២ស្លាបព្រាបាយក្នុងទឹក ៤ ទៅ ៥លីត្រ។ ប្រើប្រាស់អេប៉ុងសើមដើម្បីបង្កើតពពុះសាប៊ូ។ បន្ទាប់មកលាងសម្អាតជាមួយចានជាមួយទឹកឱ្យបានស្អាតល្អ។',
         'Mix 2 caps of Floor cleaner with 2.5 liters of water for daily cleaning. Mix 2 caps of Floor cleaner with 1 liter of water for cleaning and killing bacteria. Use pure Floor cleaner to clean heavily stained areas.': 'ដាក់ទឹកជូតការ៉ូ 2 គម្រប ជាមួយទឹក 2.5 លីត្រ សម្រាប់ការសម្អាតជាប្រចាំថ្ងៃ។ ដាក់ទឹកជូតការ៉ូ 2 គម្រប ជាមួយទឹក 1 លីត្រ សម្រាប់ការសម្អាត និងកំចាត់បាក់តេរី។ ប្រើទឹកជូតការ៉ូសុទ្ធដើម្បីសម្អាតលើកន្លែងដែលមានស្នាមប្រឡាក់ខ្លាំង។',
-        'Hand use: Separate the colors of the clothes, add 2 bottles of detergent liquid to 4-5 liters of water, soak for 30 minutes or less then this and get double the effect, then wash and rinse with clean water 2-3 times and dry in a sunny place. Machine use: Separate the colors of the clothes, add 2 caps of detergent liquid for 5-6 kg of clothes, add 1 cap for slightly stained clothes, and follow the instructions of the machine.': 'ការប្រើដោយដៃ៖ បែងចែកពណ៍សំលៀកបំពាក់អោយដាច់ដោយឡែកពីគ្នា, ដាក់ទឹកសាប៊ូ 2 គំរបដបទៅក្នុងទឹក 4-5 លីត្រ ត្រាំសម្លៀកពាក់ទុក 30នាទី ឬតិចជានេះ ដើម្បីងាយស្រួលក្នុងការសម្អាត រួចធ្វើការបោកគក់ និងជម្រះទឹក 2-3ដង បន្ទាប់មកដាក់ហាលនៅកន្លែងដែលមានពន្លឺព្រះអាទិត្យ។ ការប្រើដោយម៉ាស៊ីន៖ បែងចែកពណ៍សំលៀកបំពាក់អោយដាច់ដោយឡែកពីគ្នា, ដាក់ទឹកសាប៊ូ 2 គំរបដបសំរាប់សំលៀកបំពាក់ 5-6 Kg បន្ថែម 1 គម្របដបទៀតក្នុងករណីសម្លៀកបំពាក់ប្រឡាក់ខ្លាំង និងធ្វើទៅតាមការណែនាំពីរបៀបប្រើរបស់ម៉ាស៊ីន។',
+        '<strong>Hand use:</strong> Separate the colors of the clothes, add 2 bottles of detergent liquid to 4-5 liters of water, soak for 30 minutes or less then this and get double the effect, then wash and rinse with clean water 2-3 times and dry in a sunny place.<br><br><strong>Machine use:</strong> Separate the colors of the clothes, add 2 caps of detergent liquid for 5-6 kg of clothes, add 1 cap for slightly stained clothes, and follow the instructions of the machine.': '<strong>ការប្រើដោយដៃ៖</strong> បែងចែកពណ៍សំលៀកបំពាក់អោយដាច់ដោយឡែកពីគ្នា, ដាក់ទឹកសាប៊ូ 2 គំរបដបទៅក្នុងទឹក 4-5 លីត្រ ត្រាំសម្លៀកពាក់ទុក 30នាទី ឬតិចជានេះ ដើម្បីងាយស្រួលក្នុងការសម្អាត រួចធ្វើការបោកគក់ និងជម្រះទឹក 2-3ដង បន្ទាប់មកដាក់ហាលនៅកន្លែងដែលមានពន្លឺព្រះអាទិត្យ។<br><br><strong>ការប្រើដោយម៉ាស៊ីន៖</strong> បែងចែកពណ៍សំលៀកបំពាក់អោយដាច់ដោយឡែកពីគ្នា, ដាក់ទឹកសាប៊ូ 2 គំរបដបសំរាប់សំលៀកបំពាក់ 5-6 Kg បន្ថែម 1 គម្របដបទៀតក្នុងករណីសម្លៀកបំពាក់ប្រឡាក់ខ្លាំង និងធ្វើទៅតាមការណែនាំពីរបៀបប្រើរបស់ម៉ាស៊ីន។',
         'Rotate the spray head at the end of the machine from "large spray" to "small spray". Spray directly onto the dirty and stained surface, leave for 2 minutes, then use a cloth to wipe away all stains. Rotate the spray head to the "off" position after use.': 'បង្វិលក្បាលបាញ់នៅទីតាំងចុងម៉ាស៊ីនពី "បាញ់ធំ" ទៅ "បាញ់តូច"។ បាញ់ដោយផ្ទាល់ទៅលើផ្ទៃកខ្វក់ និងមានស្នាមប្រឡាក់ ទុកចោលរយៈពេល ២នាទី រួចប្រើក្រណាត់ដើម្បីជូតស្នាមប្រឡាក់ទាំងអស់ឱ្យបានស្អាត។ បង្វិលក្បាលបាញ់ទៅទីតាំង "បិទ" បន្ទាប់ពីការប្រើប្រាស់រួចរាល់។',
         'Twist the lid upwards. Press the lid to release the hand soap. Scrub with water for 10-20 seconds. Then rinse with clean water.': 'មួលគំរបអោយឡើងទៅលើ។ ចុចគំរបដើម្បីអោយចេញទឹកសាប៊ូលាងដៃ។ ដុសលាងជាមួយទឹក 10-20 វិនាទី។ រួចលាងសំអាតជាមួយទឹកស្អាត។',
         'For use on white clothes and fabrics. Pour 30 ml of Ojavel into 10 liters of water and add soap as usual. Add clothes, soak for 5 minutes, then wash as usual.': 'ប្រើសម្រាប់សំលៀកបំពាក់ និងក្រណាត់ពណ៌ស។ ចាក់ទឹកអូសាវែលចំនួន ៣០ មីលីលីត្រ ទៅក្នុងទឹក ១០លីត្រហើយដាក់សាប៊ូតាមធម្មតា។ ដាក់សំលៀកបំពាក់ចូលរួចត្រាំអោយបានចំនួន៥នាទីរួចធ្វើការដុសសម្អាតធម្មតា។',
-        'For toilet bowls: Spray LIX Toilet Cleaner directly into and around the rim of the toilet bowl, wait a moment, then use a toilet brush to scrub and clean, then rinse thoroughly with water. For bathroom tiles and walls: Spray LIX Toilet Cleaner directly onto bathroom tiles and walls, scrub to remove stains, then rinse thoroughly with water.': 'សម្រាប់ផើងបង្គន់អនាម័យ៖ បាញ់ទឹកសម្អាតបង្គន់ LIX ដោយផ្ទាល់ទៅខាងក្នុងនិងជុំវិញបិរវេណផើងបង្គន់ រងចាំមួយសន្ទុះ រួចយកច្រាសសម្រាប់សម្អាតបង្គន់ ទៅដុសខាត់សម្អាត និងលាងជម្រះជាមួយទឹកតាមក្រោយឱ្យបានស្អាតល្អ។ សម្រាប់ការ៉ូ និង ជញ្ជាំងបន្ទប់ទឹក៖ បាញ់ទឹកសម្អាតបង្គន់ LIX ដោយផ្ទាល់លើការ៉ូ និង ជញ្ជាំងបន្ទប់ទឹក រួចដុសខាត់សម្អាតស្នាមប្រឡាក់ បន្ទាប់មកលាងជម្រះជាមួយទឹកតាមក្រោយឱ្យបានស្អាតល្អ។'
+        '<strong>For toilet bowls:</strong> Spray LIX Toilet Cleaner directly into and around the rim of the toilet bowl, wait a moment, then use a toilet brush to scrub and clean, then rinse thoroughly with water.<br><br><strong>For bathroom tiles and walls:</strong> Spray LIX Toilet Cleaner directly onto bathroom tiles and walls, scrub to remove stains, then rinse thoroughly with water.': '<strong>សម្រាប់ផើងបង្គន់អនាម័យ៖</strong> បាញ់ទឹកសម្អាតបង្គន់ LIX ដោយផ្ទាល់ទៅខាងក្នុងនិងជុំវិញបិរវេណផើងបង្គន់ រងចាំមួយសន្ទុះ រួចយកច្រាសសម្រាប់សម្អាតបង្គន់ ទៅដុសខាត់សម្អាត និងលាងជម្រះជាមួយទឹកតាមក្រោយឱ្យបានស្អាតល្អ។<br><br><strong>សម្រាប់ការ៉ូ និង ជញ្ជាំងបន្ទប់ទឹក៖</strong> បាញ់ទឹកសម្អាតបង្គន់ LIX ដោយផ្ទាល់លើការ៉ូ និង ជញ្ជាំងបន្ទប់ទឹក រួចដុសខាត់សម្អាតស្នាមប្រឡាក់ បន្ទាប់មកលាងជម្រះជាមួយទឹកតាមក្រោយឱ្យបានស្អាតល្អ។'
     }
 };
 
@@ -583,13 +583,13 @@ function translateProductContent() {
         const contentElements = document.querySelectorAll('.tab-content p');
         console.log('Found', contentElements.length, 'content elements');
         contentElements.forEach(contentElement => {
-            const originalText = contentElement.textContent.trim();
+            const originalText = contentElement.innerHTML.trim();
             if (translations[originalText]) {
                 // Store original text if not already stored
                 if (!contentElement.dataset.originalText) {
                     contentElement.dataset.originalText = originalText;
                 }
-                contentElement.textContent = translations[originalText];
+                contentElement.innerHTML = translations[originalText];
                 console.log('Translated content:', originalText.substring(0, 50) + '...', '->', translations[originalText].substring(0, 50) + '...');
             }
         });
@@ -616,7 +616,12 @@ function translateProductContent() {
         console.log('Found', elementsWithOriginalText.length, 'elements with original text');
         elementsWithOriginalText.forEach(element => {
             if (element.dataset.originalText) {
-                element.textContent = element.dataset.originalText;
+                // Use innerHTML for elements that might contain HTML
+                if (element.classList.contains('tab-content') || element.closest('.tab-content')) {
+                    element.innerHTML = element.dataset.originalText;
+                } else {
+                    element.textContent = element.dataset.originalText;
+                }
                 console.log('Restored English text:', element.dataset.originalText);
             }
         });
