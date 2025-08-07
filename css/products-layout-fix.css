@@ -620,7 +620,7 @@ html:lang(kh) .products-main .fab, html[lang="kh"] .products-main .fab {
 }
 
 [data-theme="dark"] .variant-option.active {
-    background: #fef2f2 !important;
+    background: #000000 !important;
     border-color: #dc2626 !important;
 }
 
