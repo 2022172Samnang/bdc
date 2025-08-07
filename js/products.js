@@ -141,18 +141,18 @@ const productData = {
             rating: 4.8,
             reviews: 124,
             badge: 'Popular',
-            mainImage: '../images/products/lix_detergent_summer_flower.webp',
+            mainImage: '../images/products/lix_detergent_summer_flower_3000.webp',
             thumbnails: [
-                '../images/products/lix_detergent_summer_flower.webp'
+                '../images/products/lix_detergent_summer_flower_3000.webp'
             ],
             variants: [
-                { size: '150g', image: '../images/products/lix_detergent_summer_flower.webp' },
-                { size: '300g', image: '../images/products/lix_detergent_summer_flower.webp' },
-                { size: '500g', image: '../images/products/lix_detergent_summer_flower.webp' },
-                { size: '1kg', image: '../images/products/lix_detergent_summer_flower.webp' },
-                { size: '3kg', image: '../images/products/lix_detergent_summer_flower.webp' },
-                { size: '4kg', image: '../images/products/lix_detergent_summer_flower.webp' },
-                { size: '5kg', image: '../images/products/lix_detergent_summer_flower.webp' }
+                { size: '150g', image: '../images/placeholder.svg' },
+                { size: '300g', image: '../images/placeholder.svg' },
+                { size: '500g', image: '../images/placeholder.svg' },
+                { size: '1kg', image: '../images/placeholder.svg' },
+                { size: '3kg', image: '../images/products/lix_detergent_summer_flower_3000.webp' },
+                { size: '4kg', image: '../images/placeholder.svg' },
+                { size: '5kg', image: '../images/placeholder.svg' }
             ],
             benefits: 'Removes stains and odors on clothes, smells like flowers on the fabric, does not cut hands and can be used both machine and hand wash.',
             usage: 'Separate your white and colored clothes. Put 30 grams of detergent in 3-4 liters of water, stir to foam, and soak the clothes for 30 minutes or less. Wash with water 2-3 times and dry in the sun.',
@@ -165,19 +165,19 @@ const productData = {
             rating: 4.6,
             reviews: 89,
             badge: 'Best Seller',
-            mainImage: '../images/products/lix_detergent_lemon_.webp',
+            mainImage: '../images/products/lix_detergent_lemon_1000.webp',
             thumbnails: [
-                '../images/products/lix_detergent_lemon_.webp'
+                '../images/products/lix_detergent_lemon_1000.webp'
             ],
             variants: [
-                { size: '150g', image: '../images/products/lix_detergent_lemon_.webp' },
-                { size: '300g', image: '../images/products/lix_detergent_lemon_.webp' },
-                { size: '400g', image: '../images/products/lix_detergent_lemon_.webp' },
-                { size: '500g', image: '../images/products/lix_detergent_lemon_.webp' },
-                { size: '1kg', image: '../images/products/lix_detergent_lemon_.webp' },
-                { size: '3kg', image: '../images/products/lix_detergent_lemon_.webp' },
-                { size: '4kg', image: '../images/products/lix_detergent_lemon_.webp' },
-                { size: '5kg', image: '../images/products/lix_detergent_lemon_.webp' }
+                { size: '150g', image: '../images/placeholder.svg' },
+                { size: '300g', image: '../images/placeholder.svg' },
+                { size: '400g', image: '../images/placeholder.svg' },
+                { size: '500g', image: '../images/placeholder.svg' },
+                { size: '1kg', image: '../images/products/lix_detergent_lemon_1000.webp' },
+                { size: '3kg', image: '../images/placeholder.svg' },
+                { size: '4kg', image: '../images/placeholder.svg' },
+                { size: '5kg', image: '../images/placeholder.svg' }
             ],
             benefits: 'Helps make fabrics whiter, has a natural lemon scent, does not cut hands, and can be used in both machine and hand wash.',
             usage: 'Separate your white and colored clothes. Put 30 grams of detergent in 3-4 liters of water, stir to foam, and soak the clothes for 30 minutes or less. Wash with water 2-3 times and dry in the sun.',
@@ -190,18 +190,19 @@ const productData = {
             rating: 4.9,
             reviews: 203,
             badge: 'Premium',
-            mainImage: '../images/products/lix_detergent_pises_.webp',
+            mainImage: '../images/products/lix_detergent_pises_800.webp',
             thumbnails: [
-                '../images/products/lix_detergent_pises_.webp'
+                '../images/products/lix_detergent_pises_800.webp',
+                '../images/products/lix_detergent_pises_5000.webp'
             ],
             variants: [
-                { size: '120g', image: '../images/products/lix_detergent_pises_.webp' },
-                { size: '350g', image: '../images/products/lix_detergent_pises_.webp' },
-                { size: '800g', image: '../images/products/lix_detergent_pises_.webp' },
-                { size: '2.5kg + DW 1.5L', image: '../images/products/lix_detergent_pises_.webp' },
-                { size: '2.5kg + DW 1.5L (Special)', image: '../images/products/lix_detergent_pises_.webp' },
-                { size: '3.5kg', image: '../images/products/lix_detergent_pises_.webp' },
-                { size: '5kg', image: '../images/products/lix_detergent_pises_.webp' }
+                { size: '120g', image: '../images/placeholder.svg' },
+                { size: '350g', image: '../images/placeholder.svg' },
+                { size: '800g', image: '../images/products/lix_detergent_pises_800.webp' },
+                { size: '2.5kg + DW 1.5L', image: '../images/placeholder.svg' },
+                { size: '2.5kg + DW 1.5L (Special)', image: '../images/placeholder.svg' },
+                { size: '3.5kg', image: '../images/placeholder.svg' },
+                { size: '5kg', image: '../images/products/lix_detergent_pises_5000.webp' }
             ],
             benefits: 'Detergent powder easily dissolves in water, has double the quality of stain removal, makes clothes as bright as new, and can be used in both machine and hand washing.',
             usage: 'Separate your white and colored clothes. Put 30 grams of detergent in 3-4 liters of water, stir to foam, and soak the clothes for 30 minutes or less. Wash with water 2-3 times and dry in the sun.',
@@ -214,15 +215,16 @@ const productData = {
             rating: 4.8,
             reviews: 156,
             badge: 'Limited Edition',
-            mainImage: '../images/products/lix_detergent_pises_sakura.webp',
+            mainImage: '../images/products/lix_detergent_pises_sakura_800.webp',
             thumbnails: [
-                '../images/products/lix_detergent_pises_sakura.webp'
+                '../images/products/lix_detergent_pises_sakura_800.webp',
+                '../images/products/lix_detergent_pises_sakura_4000.webp'
             ],
             variants: [
-                { size: '120g', image: '../images/products/lix_detergent_pises_sakura.webp' },
-                { size: '400g', image: '../images/products/lix_detergent_pises_sakura.webp' },
-                { size: '800g', image: '../images/products/lix_detergent_pises_sakura.webp' },
-                { size: '4kg', image: '../images/products/lix_detergent_pises_sakura.webp' }
+                { size: '120g', image: '../images/placeholder.svg' },
+                { size: '400g', image: '../images/placeholder.svg' },
+                { size: '800g', image: '../images/products/lix_detergent_pises_sakura_800.webp' },
+                { size: '4kg', image: '../images/products/lix_detergent_pises_sakura_4000.webp' }
             ],
             benefits: 'Detergent powder easily dissolves in water, has double the quality of stain removal, makes clothes as bright as new, and can be used in both machine and hand washing.',
             usage: 'Separate your white and colored clothes. Put 30 grams of detergent in 3-4 liters of water, stir to foam, and soak the clothes for 30 minutes or less. Wash with water 2-3 times and dry in the sun.',
@@ -235,13 +237,13 @@ const productData = {
             rating: 4.7,
             reviews: 98,
             badge: 'New',
-            mainImage: '../images/products/lix_detergent_super_clean_&_fresh_purple.webp',
+            mainImage: '../images/products/lix_detergent_super_clean_&_fresh_purple_3700.webp',
             thumbnails: [
-                '../images/products/lix_detergent_super_clean_&_fresh_purple.webp'
+                '../images/products/lix_detergent_super_clean_&_fresh_purple_3700.webp'
             ],
             variants: [
-                { size: '110g', image: '../images/products/lix_detergent_super_clean_&_fresh_purple.webp' },
-                { size: '3.7kg', image: '../images/products/lix_detergent_super_clean_&_fresh_purple.webp' }
+                { size: '110g', image: '../images/placeholder.svg' },
+                { size: '3.7kg', image: '../images/products/lix_detergent_super_clean_&_fresh_purple_3700.webp' }
             ],
             benefits: 'Detergent powder easily dissolves in water, has double the quality of stain removal, makes clothes as bright as new, and can be used in both machine and hand washing.',
             usage: 'Separate your white and colored clothes. Put 30 grams of detergent in 3-4 liters of water, stir to foam, and soak the clothes for 30 minutes or less. Wash with water 2-3 times and dry in the sun.',
@@ -397,7 +399,7 @@ const productData = {
             ],
             variants: [
                 { size: '650ml', image: '../images/products/lix_glass_cleaner_12_650ml.webp' },
-                { size: '5L', image: '../images/products/lix_glass_cleaner_5l.webp' }
+                { size: '5L', image: '../images/products/lix_glass_cleaner_5000.webp' }
             ],
             benefits: 'Highly effective in cleaning glass, keeps glass quality as good as new, removes stains and dust well, and has a pleasant scent.',
             usage: 'Rotate the spray head at the end of the machine from "large spray" to "small spray". Spray directly onto the dirty and stained surface, leave for 2 minutes, then use a cloth to wipe away all stains. Rotate the spray head to the "off" position after use.',
