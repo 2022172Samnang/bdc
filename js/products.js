@@ -395,7 +395,7 @@ const productData = {
             mainImage: '../images/products/lix_glass_cleaner_12_650ml.webp',
             thumbnails: [
                 '../images/products/lix_glass_cleaner_12_650ml.webp',
-                '../images/products/lix_glass_cleaner_5l.webp'
+                '../images/products/lix_glass_cleaner_5000.webp'
             ],
             variants: [
                 { size: '650ml', image: '../images/products/lix_glass_cleaner_12_650ml.webp' },
